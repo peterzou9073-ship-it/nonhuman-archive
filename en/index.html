@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archive of Non-Human Civilization</title>
+<style>
+:root{--bg:#0b0e14;--card:#121724;--line:#1f2a44;--txt:#dfe6f3;--dim:#8b96b3;--acc:#6fc3ff;--high:#37d67a;--mid:#ffcf5c}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,"Helvetica Neue",Arial,"Noto Sans",sans-serif;margin:0;line-height:1.75}
+header{position:sticky;top:0;z-index:10;background:rgba(11,14,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{max-width:1060px;margin:0 auto;display:flex;gap:18px;align-items:center;padding:12px 20px;flex-wrap:wrap}
+.nav .logo{font-weight:800;letter-spacing:2px}
+.nav a{color:var(--dim);text-decoration:none;font-size:14px}
+.nav a:hover{color:var(--acc)}
+.nav .lang{margin-left:auto;border:1px solid var(--line);border-radius:20px;padding:4px 14px}
+.hero{max-width:1060px;margin:0 auto;padding:56px 20px 24px}
+.hero h1{font-size:40px;margin:0 0 12px;letter-spacing:4px}
+.hero .stance{border-left:3px solid var(--acc);padding:10px 16px;background:var(--card);border-radius:0 8px 8px 0;color:var(--dim);font-size:15px}
+main{max-width:1060px;margin:0 auto;padding:10px 20px 80px}
+h2{font-size:24px;margin:44px 0 6px;letter-spacing:2px}
+.sec-desc{color:var(--dim);font-size:14px;margin-bottom:18px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.toolbar input{flex:1;min-width:200px;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:10px 14px;font-size:14px}
+.toolbar button{background:var(--card);border:1px solid var(--line);color:var(--dim);border-radius:8px;padding:10px 16px;cursor:pointer;font-size:14px}
+.toolbar button.active,.toolbar button:hover{border-color:var(--acc);color:var(--acc)}
+.case,.deb{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:16px 0}
+.deb-group{font-size:12px;color:var(--acc);letter-spacing:1px;margin-bottom:4px}
+.case-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.case-head h3,.deb h3{margin:0 0 6px;font-size:18px}
+.case-meta{color:var(--dim);font-size:13px;margin-bottom:10px}
+.cred{font-size:12px;white-space:nowrap;padding:3px 10px;border-radius:20px;border:1px solid}
+.cred-high{color:var(--high);border-color:var(--high)}
+.cred-mid{color:var(--mid);border-color:var(--mid)}
+.case-body p{font-size:14px;margin:8px 0}
+.case-body ul{font-size:14px;padding-left:20px}
+.case-body li{margin:6px 0}
+.hidden{display:none}
+.tl-row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl-time{min-width:110px;color:var(--acc);font-size:13px;font-weight:700}
+.tl-event strong{font-size:15px}
+.tl-event p{color:var(--dim);font-size:13px;margin:6px 0 0}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#182033}
+blockquote{border-left:3px solid var(--line);margin:16px 0;padding:8px 16px;color:var(--dim);font-size:14px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 22px;flex:1;min-width:140px;text-align:center}
+.stat .n{font-size:28px;font-weight:800;color:var(--acc)}
+.stat .l{font-size:12px;color:var(--dim)}
+footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;color:var(--dim);font-size:12px}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+<span class="logo">🛸 Archive of Non-Human Civilization</span>
+<a href="#cases">Credible Cases</a><a href="#debunked">Debunked List</a><a href="#timeline">Gov Timeline</a><a href="#method">Methodology</a><a href="#cost">Site Cost</a><a class="lang" href="../">中文</a>
+</nav></header>
+<div class="hero">
+<h1>Archive of Non-Human Civilization</h1>
+<div class="stance"><strong>Our stance:</strong> This archive makes no claim that non-human civilization exists. What it collects are among the hardest-to-explain aerial anomaly events in the human record — the evidence is here; the judgment is yours. Facts current as of October 2026.</div>
+<div class="stats">
+<div class="stat"><div class="n">23</div><div class="l">Credible cases</div></div>
+<div class="stat"><div class="n">9</div><div class="l">Debunked / excluded records</div></div>
+<div class="stat"><div class="n">17</div><div class="l">Gov timeline entries</div></div>
+</div>
+</div>
+<main>
+<section id="cases">
+<h2>Part 1 · Credible Case Files</h2>
+<div class="sec-desc">Each case includes date, location, overview, witnesses/evidence, official conclusions, a credibility rating, and "confirmed / unconfirmed" labels. Use the search box or credibility filter.</div>
+<div class="toolbar">
+<input id="q" type="search" placeholder="Search cases, places, keywords… (e.g. Tic Tac / Belgium / radar)">
+<button data-f="all" class="active">All</button>
+<button data-f="high">Credibility: High</button>
+<button data-f="mid">Credibility: Mid</button>
+</div>
+<div id="case-list">
+
+    <article class="case high" data-search="case 01 · the kenneth arnold sighting (the start of the modern flying-saucer era) june 24, 1947 near mount rainier, washington state, usa 
+- **date:** june 24, 1947
+- **location:** near mount rainier, washington state, usa
+- **overview:** private pilot kenneth arnold, while searching for a crashed aircraft near mount rainier, saw nine luminous objects flying in formation at high speed. he described their motion as &quot;like saucers skipping across water&quot; (saucer-like), from which the press coined the term &quot;flying saucer.&quot; he estimated their speed at roughly 1,200 mph (calculated from his own airspeed and landmark timing).
+- **key witnesses / evidence:** arnold himself (an experienced pilot); other pilots later reported seeing similar objects in the area that day; no imagery, no radar records.
+- **official conclusion:** the air force&#x27;s project blue book classified it as a &quot;mirage&quot;; arnold never accepted that conclusion in his lifetime.
+- **credibility: high.** reason: the witness is identified, his account was consistent and never changed; it is the starting point of modern ufo attention and historically irreplaceable. but it must be acknowledged: this is a **single-witness** case with no physical evidence.
+- **confirmed:** the sighting report itself, the press coverage, the official &quot;mirage&quot; conclusion. **unconfirmed:** what the objects were, whether arnold&#x27;s speed estimate was accurate.
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 01 · The Kenneth Arnold Sighting (The Start of the Modern Flying-Saucer Era)</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">June 24, 1947 ｜ Near Mount Rainier, Washington State, USA</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> June 24, 1947</li>
+<li><strong>Location:</strong> Near Mount Rainier, Washington State, USA</li>
+<li><strong>Overview:</strong> Private pilot Kenneth Arnold, while searching for a crashed aircraft near Mount Rainier, saw nine luminous objects flying in formation at high speed. He described their motion as &quot;like saucers skipping across water&quot; (saucer-like), from which the press coined the term &quot;flying saucer.&quot; He estimated their speed at roughly 1,200 mph (calculated from his own airspeed and landmark timing).</li>
+<li><strong>Key witnesses / evidence:</strong> Arnold himself (an experienced pilot); other pilots later reported seeing similar objects in the area that day; no imagery, no radar records.</li>
+<li><strong>Official conclusion:</strong> The Air Force&#x27;s Project Blue Book classified it as a &quot;mirage&quot;; Arnold never accepted that conclusion in his lifetime.</li>
+<li><strong>Credibility: High.</strong> Reason: the witness is identified, his account was consistent and never changed; it is the starting point of modern UFO attention and historically irreplaceable. But it must be acknowledged: this is a <strong>single-witness</strong> case with no physical evidence.</li>
+<li><strong>Confirmed:</strong> the sighting report itself, the press coverage, the official &quot;mirage&quot; conclusion. <strong>Unconfirmed:</strong> what the objects were, whether Arnold&#x27;s speed estimate was accurate.</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 02 · the roswell incident july 1947 near roswell, new mexico, usa (foster ranch, corona) - **source material:** [fbi guy hottel memo scan](media/roswell/hottel-memo.pdf) (4 pages, public domain). ⚠️ citation warning: the fbi stresses this memo is unrelated to the 1947 roswell incident and its contents are hearsay — **do not cite it as roswell evidence**. it is archived here only as a &quot;famous misattributed document.&quot;
+
+- **date:** july 1947
+- **location:** near roswell, new mexico, usa (foster ranch, corona)
+- **overview:** rancher mac brazel found scattered strange debris, reported it to the sheriff, and it was handed to the roswell army air field base. on july 8 the base issued a press release saying it had &quot;recovered a flying disc&quot;; the next day the military retracted it, calling the debris a weather balloon.
+- **key witnesses / evidence:** base intelligence officer jesse marcel sr. handled the debris and said years later that the material was &quot;not of this earth&quot;; late-life testimonies from several military personnel and civilians of the time; declassified files including the fbi memo.
+- **official conclusion:** a 1994 usaf report said the debris came from &quot;project mogul&quot; (high-altitude balloons carrying eavesdropping equipment to monitor soviet nuclear tests); a 1997 report said the alleged &quot;alien bodies&quot; sightings were confused memories of later crash-test dummy drops.
+- **credibility: mid.** reason: the debris recovery genuinely happened, and the military&#x27;s contradictory statements (admitting a &quot;flying disc&quot; one day, retracting the next) are a legitimate starting point for questions; but the &quot;crashed alien spacecraft&quot; claim has **no physical evidence behind it** and rests mainly on decades-old recollections. it must be presented in a balanced way: the official explanation (mogul balloons) has a document chain; the conspiracy version does not.
+- **confirmed:** the debris was recovered, the two contradictory military statements, the existence of project mogul. **unconfirmed:** that the debris was an alien spacecraft, that there were alien bodies, that the government covered it up.
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 02 · The Roswell Incident</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">July 1947 ｜ Near Roswell, New Mexico, USA (Foster Ranch, Corona)</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/roswell/hottel-memo.pdf" target="_blank" rel="noopener">FBI Guy Hottel memo scan</a> (4 pages, public domain). ⚠️ Citation warning: the FBI stresses this memo is unrelated to the 1947 Roswell incident and its contents are hearsay — <strong>do not cite it as Roswell evidence</strong>. It is archived here only as a &quot;famous misattributed document.&quot;</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> July 1947</li>
+<li><strong>Location:</strong> Near Roswell, New Mexico, USA (Foster Ranch, Corona)</li>
+<li><strong>Overview:</strong> Rancher Mac Brazel found scattered strange debris, reported it to the sheriff, and it was handed to the Roswell Army Air Field base. On July 8 the base issued a press release saying it had &quot;recovered a flying disc&quot;; the next day the military retracted it, calling the debris a weather balloon.</li>
+<li><strong>Key witnesses / evidence:</strong> Base intelligence officer Jesse Marcel Sr. handled the debris and said years later that the material was &quot;not of this Earth&quot;; late-life testimonies from several military personnel and civilians of the time; declassified files including the FBI memo.</li>
+<li><strong>Official conclusion:</strong> A 1994 USAF report said the debris came from &quot;Project Mogul&quot; (high-altitude balloons carrying eavesdropping equipment to monitor Soviet nuclear tests); a 1997 report said the alleged &quot;alien bodies&quot; sightings were confused memories of later crash-test dummy drops.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the debris recovery genuinely happened, and the military&#x27;s contradictory statements (admitting a &quot;flying disc&quot; one day, retracting the next) are a legitimate starting point for questions; but the &quot;crashed alien spacecraft&quot; claim has <strong>no physical evidence behind it</strong> and rests mainly on decades-old recollections. It must be presented in a balanced way: the official explanation (Mogul balloons) has a document chain; the conspiracy version does not.</li>
+<li><strong>Confirmed:</strong> the debris was recovered, the two contradictory military statements, the existence of Project Mogul. <strong>Unconfirmed:</strong> that the debris was an alien spacecraft, that there were alien bodies, that the government covered it up.</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 03 · the 1952 washington, d.c. ufo flap july 19–20 and july 26–27, 1952 (two weekends) over washington, d.c., usa - **source material:** [usaf official 1952 flap frequency chart](media/washington1952/usaf-1952-flap-frequency-graph.png) (public domain).
+
+- **date:** july 19–20 and july 26–27, 1952 (two weekends)
+- **location:** over washington, d.c., usa
+- **overview:** radar at washington national airport and andrews air force base repeatedly tracked unknown targets; multiple pilots and ground personnel saw luminous objects; the air force scrambled interceptors twice — the targets vanished as jets approached and reappeared after they left.
+- **key witnesses / evidence:** simultaneous records from multiple radar stations, sightings by civilian and military pilots, air traffic controller testimony; the story made national headlines.
+- **official conclusion:** the air force held its largest press conference to date, attributing the returns to &quot;temperature inversion&quot; radar mirages; project blue book chief edward ruppelt privately expressed doubt about that explanation.
+- **credibility: high.** reason: radar + visual sightings + interceptor scrambles, over the capital&#x27;s core airspace, forcing a public official response. the &quot;temperature inversion&quot; explanation is still considered by many researchers unable to account for all features (such as the targets&#x27; high-speed maneuvers).
+- **confirmed:** the radar records, the intercepts, the official press conference. **unconfirmed:** the true nature of the targets.
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 03 · The 1952 Washington, D.C. UFO Flap</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">July 19–20 and July 26–27, 1952 (two weekends) ｜ Over Washington, D.C., USA</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/washington1952/usaf-1952-flap-frequency-graph.png" target="_blank" rel="noopener">USAF official 1952 flap frequency chart</a> (public domain).</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> July 19–20 and July 26–27, 1952 (two weekends)</li>
+<li><strong>Location:</strong> Over Washington, D.C., USA</li>
+<li><strong>Overview:</strong> Radar at Washington National Airport and Andrews Air Force Base repeatedly tracked unknown targets; multiple pilots and ground personnel saw luminous objects; the Air Force scrambled interceptors twice — the targets vanished as jets approached and reappeared after they left.</li>
+<li><strong>Key witnesses / evidence:</strong> Simultaneous records from multiple radar stations, sightings by civilian and military pilots, air traffic controller testimony; the story made national headlines.</li>
+<li><strong>Official conclusion:</strong> The Air Force held its largest press conference to date, attributing the returns to &quot;temperature inversion&quot; radar mirages; Project Blue Book chief Edward Ruppelt privately expressed doubt about that explanation.</li>
+<li><strong>Credibility: High.</strong> Reason: radar + visual sightings + interceptor scrambles, over the capital&#x27;s core airspace, forcing a public official response. The &quot;temperature inversion&quot; explanation is still considered by many researchers unable to account for all features (such as the targets&#x27; high-speed maneuvers).</li>
+<li><strong>Confirmed:</strong> the radar records, the intercepts, the official press conference. <strong>Unconfirmed:</strong> the true nature of the targets.</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 04 · the rendlesham forest incident (&quot;britain&#x27;s roswell&quot;) december 26–28, 1980 rendlesham forest, suffolk, england, beside raf woodbridge (a usaf base) 
+- **date:** december 26–28, 1980
+- **location:** rendlesham forest, suffolk, england, beside raf woodbridge (a usaf base)
+- **overview:** usaf security personnel reported strange lights in the forest on three consecutive nights; according to jim penniston and john burroughs, on the first night someone approached a triangular craft at close range and touched it; on the third night, deputy base commander lt. col. charles halt led a team into the forest, recording everything on a tape recorder, measuring anomalous radiation readings and finding ground indentations.
+- **key witnesses / evidence:** the halt memo (january 13, 1981, to the uk ministry of defence, now declassified); halt&#x27;s field audio tape; testimony from multiple servicemen; records of ground traces and radiation readings.
+- **official conclusion:** the uk mod concluded &quot;no defence significance&quot; and did not investigate further; skeptics proposed the orford ness lighthouse as a possible misidentification source.
+- **credibility: high.** reason: military witnesses, a formal memo, audio recordings, physical traces — the evidence dimensions are complete. the lighthouse theory cannot explain the close-encounter account or the radiation readings, though the &quot;close contact with a triangular craft&quot; part rests solely on the individuals&#x27; statements.
+- **confirmed:** the memo, the tape, the radiation and indentation records. **unconfirmed:** penniston&#x27;s claim of &quot;touching the craft and receiving binary code&quot; (added years later).
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 04 · The Rendlesham Forest Incident (&quot;Britain&#x27;s Roswell&quot;)</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">December 26–28, 1980 ｜ Rendlesham Forest, Suffolk, England, beside RAF Woodbridge (a USAF base)</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> December 26–28, 1980</li>
+<li><strong>Location:</strong> Rendlesham Forest, Suffolk, England, beside RAF Woodbridge (a USAF base)</li>
+<li><strong>Overview:</strong> USAF security personnel reported strange lights in the forest on three consecutive nights; according to Jim Penniston and John Burroughs, on the first night someone approached a triangular craft at close range and touched it; on the third night, deputy base commander Lt. Col. Charles Halt led a team into the forest, recording everything on a tape recorder, measuring anomalous radiation readings and finding ground indentations.</li>
+<li><strong>Key witnesses / evidence:</strong> The Halt memo (January 13, 1981, to the UK Ministry of Defence, now declassified); Halt&#x27;s field audio tape; testimony from multiple servicemen; records of ground traces and radiation readings.</li>
+<li><strong>Official conclusion:</strong> The UK MoD concluded &quot;no defence significance&quot; and did not investigate further; skeptics proposed the Orford Ness lighthouse as a possible misidentification source.</li>
+<li><strong>Credibility: High.</strong> Reason: military witnesses, a formal memo, audio recordings, physical traces — the evidence dimensions are complete. The lighthouse theory cannot explain the close-encounter account or the radiation readings, though the &quot;close contact with a triangular craft&quot; part rests solely on the individuals&#x27; statements.</li>
+<li><strong>Confirmed:</strong> the memo, the tape, the radiation and indentation records. <strong>Unconfirmed:</strong> Penniston&#x27;s claim of &quot;touching the craft and receiving binary code&quot; (added years later).</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 05 · the belgian triangle wave november 1989 – april 1990 (peak: the night of march 30–31, 1990) across belgium (liège, brussels, wavre, and others) - **source material:** [belgian wave reconstruction diagram](media/belgium1990/belgian-wave-reconstruction.png) (public domain).
+
+- **date:** november 1989 – april 1990 (peak: the night of march 30–31, 1990)
+- **location:** across belgium (liège, brussels, wavre, and others)
+- **overview:** thousands of belgians reported seeing a giant black triangular craft, low, silent, with three bright lights on its underside. on the night of march 30, 1990, the belgian air force scrambled two f-16s; ground and airborne radars repeatedly locked onto the target, which displayed extreme maneuvers (dropping from 3,000 meters to a few hundred meters in seconds; speed jumping from 280 km/h to 1,800 km/h).
+- **key witnesses / evidence:** official belgian air force radar data, f-16 pilot reports, col. wilfried de brouwer publicly acknowledging the intercepts at a press conference; thousands of witness reports.
+- **official conclusion:** the belgian air force confirmed the radar locks were real but could not identify the target; no final explanation was ever given.
+- **credibility: high.** reason: radar intercept records officially acknowledged by a nato member&#x27;s air force — an extremely high grade of evidence. but it must be noted: the most widely circulated &quot;triangle ufo photo&quot; of that era (petit-rechain, 1990) was admitted in 2011 by its photographer to be a hoax made from a polystyrene model — **the photo being fake does not make the whole wave fake**; the two must be kept separate.
+- **confirmed:** the f-16 intercepts and radar locks (officially acknowledged by the air force), the mass sightings. **unconfirmed:** the origin and nature of the triangular craft.
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 05 · The Belgian Triangle Wave</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">November 1989 – April 1990 (peak: the night of March 30–31, 1990) ｜ Across Belgium (Liège, Brussels, Wavre, and others)</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/belgium1990/belgian-wave-reconstruction.png" target="_blank" rel="noopener">Belgian wave reconstruction diagram</a> (public domain).</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> November 1989 – April 1990 (peak: the night of March 30–31, 1990)</li>
+<li><strong>Location:</strong> Across Belgium (Liège, Brussels, Wavre, and others)</li>
+<li><strong>Overview:</strong> Thousands of Belgians reported seeing a giant black triangular craft, low, silent, with three bright lights on its underside. On the night of March 30, 1990, the Belgian Air Force scrambled two F-16s; ground and airborne radars repeatedly locked onto the target, which displayed extreme maneuvers (dropping from 3,000 meters to a few hundred meters in seconds; speed jumping from 280 km/h to 1,800 km/h).</li>
+<li><strong>Key witnesses / evidence:</strong> Official Belgian Air Force radar data, F-16 pilot reports, Col. Wilfried De Brouwer publicly acknowledging the intercepts at a press conference; thousands of witness reports.</li>
+<li><strong>Official conclusion:</strong> The Belgian Air Force confirmed the radar locks were real but could not identify the target; no final explanation was ever given.</li>
+<li><strong>Credibility: High.</strong> Reason: radar intercept records officially acknowledged by a NATO member&#x27;s air force — an extremely high grade of evidence. But it must be noted: the most widely circulated &quot;triangle UFO photo&quot; of that era (Petit-Rechain, 1990) was admitted in 2011 by its photographer to be a hoax made from a polystyrene model — <strong>the photo being fake does not make the whole wave fake</strong>; the two must be kept separate.</li>
+<li><strong>Confirmed:</strong> the F-16 intercepts and radar locks (officially acknowledged by the Air Force), the mass sightings. <strong>Unconfirmed:</strong> the origin and nature of the triangular craft.</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 06 · the phoenix lights march 13, 1997 arizona, usa (from the nevada border to tucson, covering phoenix) - **source material:** [witness photograph](media/phoenix1997/phoenix-lights-1997.jpg) + [v-formation diagram](media/phoenix1997/phoenix-lights-triangle.svg) (public domain).
+
+- **date:** march 13, 1997
+- **location:** arizona, usa (from the nevada border to tucson, covering phoenix)
+- **overview:** around 20:00, a huge v-shaped (or boomerang-shaped) formation of lights slowly crossed arizona; thousands saw it, including then-governor fife symington (who later publicly admitted he saw it too). around 22:00, a row of stationary lights appeared over south mountain in phoenix.
+- **key witnesses / evidence:** thousands of witnesses, extensive video, the governor&#x27;s testimony.
+- **official conclusion:** the 22:00 row of lights was confirmed to be flares dropped by maryland air national guard a-10s at the barry goldwater range (the military later admitted it); the 20:00 v-formation **has no official explanation to this day**.
+- **credibility: high** (that the event happened) / **mid** (the nature of the v-formation). reason: this is a textbook &quot;one night, two components&quot; case — the explained flare portion and the unexplained v-formation must be kept apart; conflating them is a common error.
+- **confirmed:** the mass sightings, the military&#x27;s admission about the flares. **unconfirmed:** what the v-formation was.
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 06 · The Phoenix Lights</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">March 13, 1997 ｜ Arizona, USA (from the Nevada border to Tucson, covering Phoenix)</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/phoenix1997/phoenix-lights-1997.jpg" target="_blank" rel="noopener">Witness photograph</a> + <a href="../media/phoenix1997/phoenix-lights-triangle.svg" target="_blank" rel="noopener">V-formation diagram</a> (public domain).</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> March 13, 1997</li>
+<li><strong>Location:</strong> Arizona, USA (from the Nevada border to Tucson, covering Phoenix)</li>
+<li><strong>Overview:</strong> Around 20:00, a huge V-shaped (or boomerang-shaped) formation of lights slowly crossed Arizona; thousands saw it, including then-governor Fife Symington (who later publicly admitted he saw it too). Around 22:00, a row of stationary lights appeared over South Mountain in Phoenix.</li>
+<li><strong>Key witnesses / evidence:</strong> Thousands of witnesses, extensive video, the governor&#x27;s testimony.</li>
+<li><strong>Official conclusion:</strong> The 22:00 row of lights was confirmed to be flares dropped by Maryland Air National Guard A-10s at the Barry Goldwater range (the military later admitted it); the 20:00 V-formation <strong>has no official explanation to this day</strong>.</li>
+<li><strong>Credibility: High</strong> (that the event happened) / <strong>Mid</strong> (the nature of the V-formation). Reason: this is a textbook &quot;one night, two components&quot; case — the explained flare portion and the unexplained V-formation must be kept apart; conflating them is a common error.</li>
+<li><strong>Confirmed:</strong> the mass sightings, the military&#x27;s admission about the flares. <strong>Unconfirmed:</strong> what the V-formation was.</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 07 · the nimitz / &quot;tic tac&quot; incident november 14, 2004 off san diego, california, usa, in the uss nimitz carrier strike group training area - **source material:** [flir1 video](media/nimitz-tictac/flir1.webm) (76 seconds, officially released by the pentagon in 2020, public domain).
+
+- **date:** november 14, 2004
+- **location:** off san diego, california, usa, in the uss nimitz carrier strike group training area
+- **overview:** the cruiser uss princeton&#x27;s spy-1 radar had tracked unknown targets for days; on november 14, two f/a-18fs (vfa-41) were vectored to intercept. cmdr. david fravor and lt. alex dietrich saw a ~40-foot white &quot;tic tac&quot;-shaped object with no wings, no exhaust plume, and no visible propulsion, hovering above the ocean and mirroring fravor&#x27;s maneuvers before accelerating away instantly. a subsequently launched jet captured the famous &quot;flir1&quot; video with its forward-looking infrared pod.
+- **key witnesses / evidence:** the flir1 video (confirmed authentic by the pentagon in 2020); cruiser radar operators&#x27; testimony; public statements by four aircrew (fravor, dietrich, and two weapons systems officers); fravor&#x27;s 2023 sworn testimony before congress.
+- **official conclusion:** the pentagon confirmed the video was filmed by navy personnel and is authentic, but drew no conclusion about the object&#x27;s nature; listed as &quot;unexplained.&quot;
+- **credibility: high.** reason: military sensors + multiple top-tier pilots + radar operators + official video authentication — among the most complete military evidence chains of the 21st century.
+- **confirmed:** the video&#x27;s authenticity, the radar tracking, the pilots&#x27; statements. **unconfirmed:** the object&#x27;s origin and propulsion (any &quot;anti-gravity engine&quot; talk is speculation).
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 07 · The Nimitz / &quot;Tic Tac&quot; Incident</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">November 14, 2004 ｜ Off San Diego, California, USA, in the USS Nimitz carrier strike group training area</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/nimitz-tictac/FLIR1.webm" target="_blank" rel="noopener">FLIR1 video</a> (76 seconds, officially released by the Pentagon in 2020, public domain).</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> November 14, 2004</li>
+<li><strong>Location:</strong> Off San Diego, California, USA, in the USS Nimitz carrier strike group training area</li>
+<li><strong>Overview:</strong> The cruiser USS Princeton&#x27;s SPY-1 radar had tracked unknown targets for days; on November 14, two F/A-18Fs (VFA-41) were vectored to intercept. Cmdr. David Fravor and Lt. Alex Dietrich saw a ~40-foot white &quot;Tic Tac&quot;-shaped object with no wings, no exhaust plume, and no visible propulsion, hovering above the ocean and mirroring Fravor&#x27;s maneuvers before accelerating away instantly. A subsequently launched jet captured the famous &quot;FLIR1&quot; video with its forward-looking infrared pod.</li>
+<li><strong>Key witnesses / evidence:</strong> The FLIR1 video (confirmed authentic by the Pentagon in 2020); cruiser radar operators&#x27; testimony; public statements by four aircrew (Fravor, Dietrich, and two weapons systems officers); Fravor&#x27;s 2023 sworn testimony before Congress.</li>
+<li><strong>Official conclusion:</strong> The Pentagon confirmed the video was filmed by Navy personnel and is authentic, but drew no conclusion about the object&#x27;s nature; listed as &quot;unexplained.&quot;</li>
+<li><strong>Credibility: High.</strong> Reason: military sensors + multiple top-tier pilots + radar operators + official video authentication — among the most complete military evidence chains of the 21st century.</li>
+<li><strong>Confirmed:</strong> the video&#x27;s authenticity, the radar tracking, the pilots&#x27; statements. <strong>Unconfirmed:</strong> the object&#x27;s origin and propulsion (any &quot;anti-gravity engine&quot; talk is speculation).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 08 · the &quot;gimbal&quot; and &quot;gofast&quot; videos (2015) january 2015 off the u.s. east coast, in the uss theodore roosevelt carrier air wing (vfa-11) training area - **source material:** [gimbal video](media/gimbal-gofast/gimbal.webm) + [gofast video](media/gimbal-gofast/gofast.webm) (~34 seconds each, officially released by the pentagon in 2020, public domain).
+
+- **date:** january 2015
+- **location:** off the u.s. east coast, in the uss theodore roosevelt carrier air wing (vfa-11) training area
+- **overview:** two videos filmed by f/a-18 atflir pods were made public by the new york times in december 2017. in &quot;gimbal,&quot; a glowing object appears to rotate (pilots exclaim &quot;it&#x27;s rotating&quot;); in &quot;gofast,&quot; an object moves fast close above the ocean surface.
+- **key witnesses / evidence:** both videos (confirmed authentic by the pentagon in 2020); public descriptions by the aircrew involved.
+- **official conclusion:** the videos are authentic, but unexplained. the academic dispute must be recorded honestly: skeptics (e.g., mick west) used parallax and wind-speed data to argue the gofast object was actually slow — possibly a balloon — and that gimbal&#x27;s &quot;rotation&quot; may be an optical artifact of the infrared pod&#x27;s gimbal; proponents argue that explanation doesn&#x27;t cover all features.
+- **credibility: mid.** reason: the videos&#x27; authenticity is undisputed, but the &quot;anomalousness&quot; itself is technically contested — unlike tic tac, there is no multi-source independent corroboration. this is a textbook &quot;real video, possibly false anomaly&quot; case; both sides of the dispute must be kept.
+- **confirmed:** the videos were filmed by the navy and are authentic. **unconfirmed:** that the objects displayed extraordinary performance (credible conventional explanations compete).
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 08 · The &quot;Gimbal&quot; and &quot;GoFast&quot; Videos (2015)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">January 2015 ｜ Off the U.S. East Coast, in the USS Theodore Roosevelt carrier air wing (VFA-11) training area</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/gimbal-gofast/GIMBAL.webm" target="_blank" rel="noopener">Gimbal video</a> + <a href="../media/gimbal-gofast/GOFAST.webm" target="_blank" rel="noopener">GoFast video</a> (~34 seconds each, officially released by the Pentagon in 2020, public domain).</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> January 2015</li>
+<li><strong>Location:</strong> Off the U.S. East Coast, in the USS Theodore Roosevelt carrier air wing (VFA-11) training area</li>
+<li><strong>Overview:</strong> Two videos filmed by F/A-18 ATFLIR pods were made public by The New York Times in December 2017. In &quot;Gimbal,&quot; a glowing object appears to rotate (pilots exclaim &quot;it&#x27;s rotating&quot;); in &quot;GoFast,&quot; an object moves fast close above the ocean surface.</li>
+<li><strong>Key witnesses / evidence:</strong> Both videos (confirmed authentic by the Pentagon in 2020); public descriptions by the aircrew involved.</li>
+<li><strong>Official conclusion:</strong> The videos are authentic, but unexplained. The academic dispute must be recorded honestly: skeptics (e.g., Mick West) used parallax and wind-speed data to argue the GoFast object was actually slow — possibly a balloon — and that Gimbal&#x27;s &quot;rotation&quot; may be an optical artifact of the infrared pod&#x27;s gimbal; proponents argue that explanation doesn&#x27;t cover all features.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the videos&#x27; authenticity is undisputed, but the &quot;anomalousness&quot; itself is technically contested — unlike Tic Tac, there is no multi-source independent corroboration. This is a textbook &quot;real video, possibly false anomaly&quot; case; both sides of the dispute must be kept.</li>
+<li><strong>Confirmed:</strong> the videos were filmed by the Navy and are authentic. <strong>Unconfirmed:</strong> that the objects displayed extraordinary performance (credible conventional explanations compete).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 09 · the aguadilla incident (puerto rico, 2013) late night of april 25, 2013 (early hours of the 26th) aguadilla, puerto rico, near rafael hernández airport 
+- **date:** late night of april 25, 2013 (early hours of the 26th)
+- **location:** aguadilla, puerto rico, near rafael hernández airport
+- **overview:** shortly after takeoff, the crew of a u.s. customs and border protection (cbp) dhc-8 patrol aircraft visually spotted a cluster of red lights the airport tower also could not identify; the crew tracked it continuously with a wescam mx-15d infrared pod, recording about 3 minutes of video: an object roughly 3–5 feet across flying low at 40–120 mph, appearing to &quot;split in two&quot; and plunge into the sea, then re-emerge.
+- **key witnesses / evidence:** the infrared video (later leaked); the scientific coalition for uap studies (scu) spent two years producing a 165-page technical analysis concluding it could not be explained by any known aircraft, birds, or weather, corroborated by faa radar data obtained via foia showing matching time and position.
+- **official conclusion:** in march 2025, the pentagon&#x27;s all-domain anomaly resolution office (aaro) closed the case: with &quot;high confidence&quot; the object showed no anomalous speed or maneuvering, and with &quot;moderate confidence&quot; it was **a pair of sky lanterns**; the apparent &quot;water entry&quot; and &quot;splitting&quot; were infrared thermal-contrast changes and the visual artifact of two adjacent objects. scu rejects that conclusion.
+- **credibility: mid.** reason: this is a textbook &quot;real evidence, opposing interpretations&quot; case — the video and radar data are genuine, but scu (anomalous) and aaro (sky lanterns) give diametrically opposite readings. the archive must present both sides without picking one.
+- **confirmed:** the video is genuine, the original cbp and tower reports. **unconfirmed:** trans-medium travel (aaro has offered counter-evidence; scu is unconvinced — disputed).
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 09 · The Aguadilla Incident (Puerto Rico, 2013)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">Late night of April 25, 2013 (early hours of the 26th) ｜ Aguadilla, Puerto Rico, near Rafael Hernández Airport</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> Late night of April 25, 2013 (early hours of the 26th)</li>
+<li><strong>Location:</strong> Aguadilla, Puerto Rico, near Rafael Hernández Airport</li>
+<li><strong>Overview:</strong> Shortly after takeoff, the crew of a U.S. Customs and Border Protection (CBP) DHC-8 patrol aircraft visually spotted a cluster of red lights the airport tower also could not identify; the crew tracked it continuously with a Wescam MX-15D infrared pod, recording about 3 minutes of video: an object roughly 3–5 feet across flying low at 40–120 mph, appearing to &quot;split in two&quot; and plunge into the sea, then re-emerge.</li>
+<li><strong>Key witnesses / evidence:</strong> The infrared video (later leaked); the Scientific Coalition for UAP Studies (SCU) spent two years producing a 165-page technical analysis concluding it could not be explained by any known aircraft, birds, or weather, corroborated by FAA radar data obtained via FOIA showing matching time and position.</li>
+<li><strong>Official conclusion:</strong> In March 2025, the Pentagon&#x27;s All-domain Anomaly Resolution Office (AARO) closed the case: with &quot;high confidence&quot; the object showed no anomalous speed or maneuvering, and with &quot;moderate confidence&quot; it was <strong>a pair of sky lanterns</strong>; the apparent &quot;water entry&quot; and &quot;splitting&quot; were infrared thermal-contrast changes and the visual artifact of two adjacent objects. SCU rejects that conclusion.</li>
+<li><strong>Credibility: Mid.</strong> Reason: this is a textbook &quot;real evidence, opposing interpretations&quot; case — the video and radar data are genuine, but SCU (anomalous) and AARO (sky lanterns) give diametrically opposite readings. The archive must present both sides without picking one.</li>
+<li><strong>Confirmed:</strong> the video is genuine, the original CBP and tower reports. <strong>Unconfirmed:</strong> trans-medium travel (AARO has offered counter-evidence; SCU is unconvinced — disputed).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 10 · the uss omaha incident (2019) late night of july 15, 2019 off san diego, california, usa; the combat information center of the littoral combat ship uss omaha (lcs-12) 
+- **date:** late night of july 15, 2019
+- **location:** off san diego, california, usa; the combat information center of the littoral combat ship uss omaha (lcs-12)
+- **overview:** shipboard sensors detected multiple unknown targets; a leaked video shows a spherical object about 6 feet across hovering above the sea, moving laterally, then plunging into the water (a voice off-camera says &quot;it splashed&quot;), with radar-measured speeds of 74–254 km/h; the event lasted over an hour and no wreckage was found. separate radar footage showed 14 unknown targets operating around the ship that night.
+- **key witnesses / evidence:** the video and radar screenshots (released by documentary filmmaker jeremy corbell in may 2021); a pentagon spokesperson confirmed the video was indeed filmed by navy personnel.
+- **official conclusion:** only the video&#x27;s authenticity was confirmed; the object&#x27;s nature and the &quot;water entry&quot; were never explained.
+- **credibility: mid.** reason: official endorsement of the footage&#x27;s authenticity is a plus; but the &quot;trans-medium craft&quot; interpretation comes from corbell&#x27;s one-sided account, the video is edited (filmed off a monitor), and there is no recovered physical evidence. note: corbell is a ufo documentary filmmaker — his vested interest deserves a flag.
+- **confirmed:** the video was filmed by the navy and is authentic. **unconfirmed:** where the object went after entering the water, whether it was a &quot;trans-medium vehicle.&quot;
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 10 · The USS Omaha Incident (2019)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">Late night of July 15, 2019 ｜ Off San Diego, California, USA; the combat information center of the littoral combat ship USS Omaha (LCS-12)</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> Late night of July 15, 2019</li>
+<li><strong>Location:</strong> Off San Diego, California, USA; the combat information center of the littoral combat ship USS Omaha (LCS-12)</li>
+<li><strong>Overview:</strong> Shipboard sensors detected multiple unknown targets; a leaked video shows a spherical object about 6 feet across hovering above the sea, moving laterally, then plunging into the water (a voice off-camera says &quot;it splashed&quot;), with radar-measured speeds of 74–254 km/h; the event lasted over an hour and no wreckage was found. Separate radar footage showed 14 unknown targets operating around the ship that night.</li>
+<li><strong>Key witnesses / evidence:</strong> The video and radar screenshots (released by documentary filmmaker Jeremy Corbell in May 2021); a Pentagon spokesperson confirmed the video was indeed filmed by Navy personnel.</li>
+<li><strong>Official conclusion:</strong> Only the video&#x27;s authenticity was confirmed; the object&#x27;s nature and the &quot;water entry&quot; were never explained.</li>
+<li><strong>Credibility: Mid.</strong> Reason: official endorsement of the footage&#x27;s authenticity is a plus; but the &quot;trans-medium craft&quot; interpretation comes from Corbell&#x27;s one-sided account, the video is edited (filmed off a monitor), and there is no recovered physical evidence. Note: Corbell is a UFO documentary filmmaker — his vested interest deserves a flag.</li>
+<li><strong>Confirmed:</strong> the video was filmed by the Navy and is authentic. <strong>Unconfirmed:</strong> where the object went after entering the water, whether it was a &quot;trans-medium vehicle.&quot;</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 11 · the calvine photograph (1990) evening of august 4, 1990 near calvine, perthshire, scotland, uk 
+- **date:** evening of august 4, 1990
+- **location:** near calvine, perthshire, scotland, uk
+- **overview:** two hikers watched a ~100-foot diamond-shaped metallic object hover for about 10 minutes (with a low humming sound) while a jet flew in the distance; the object then shot upward and vanished. they took six photographs, gave them to the daily record, which passed them to the uk ministry of defence (mod) — after which the photos &quot;disappeared&quot; and the story was never published.
+- **key witnesses / evidence:** a copy of one photograph, kept for over 30 years by former raf press officer craig lindsay and made public in august 2022 after researcher david clarke tracked it down; it now resides in the sheffield hallam university archive; declassified mod files confirm an investigation took place.
+- **official conclusion:** the mod published no conclusion at the time; no new official explanation followed the photo&#x27;s release.
+- **credibility: mid.** reason: the photo&#x27;s chain of custody (newspaper → mod → press officer&#x27;s private keeping → researcher recovery) is document-supported, making it a candidate for the &quot;clearest ufo photo&quot;; but the two photographers remain unidentified and cannot be re-interviewed, and only a copy — not the negative — survives. pluses and minuses are equally clear.
+- **confirmed:** the photo&#x27;s chain of custody, that the mod once held it. **unconfirmed:** what the photographed object is, the details of the photographers&#x27; account.
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 11 · The Calvine Photograph (1990)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">Evening of August 4, 1990 ｜ Near Calvine, Perthshire, Scotland, UK</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> Evening of August 4, 1990</li>
+<li><strong>Location:</strong> Near Calvine, Perthshire, Scotland, UK</li>
+<li><strong>Overview:</strong> Two hikers watched a ~100-foot diamond-shaped metallic object hover for about 10 minutes (with a low humming sound) while a jet flew in the distance; the object then shot upward and vanished. They took six photographs, gave them to the Daily Record, which passed them to the UK Ministry of Defence (MoD) — after which the photos &quot;disappeared&quot; and the story was never published.</li>
+<li><strong>Key witnesses / evidence:</strong> A copy of one photograph, kept for over 30 years by former RAF press officer Craig Lindsay and made public in August 2022 after researcher David Clarke tracked it down; it now resides in the Sheffield Hallam University archive; declassified MoD files confirm an investigation took place.</li>
+<li><strong>Official conclusion:</strong> The MoD published no conclusion at the time; no new official explanation followed the photo&#x27;s release.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the photo&#x27;s chain of custody (newspaper → MoD → press officer&#x27;s private keeping → researcher recovery) is document-supported, making it a candidate for the &quot;clearest UFO photo&quot;; but the two photographers remain unidentified and cannot be re-interviewed, and only a copy — not the negative — survives. Pluses and minuses are equally clear.</li>
+<li><strong>Confirmed:</strong> the photo&#x27;s chain of custody, that the MoD once held it. <strong>Unconfirmed:</strong> what the photographed object is, the details of the photographers&#x27; account.</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 12 · the tehran 1976 f-4 intercept early hours of september 19, 1976 tehran, iran - **source material:** [tehran 1976 declassified file collection](media/tehran1976/tehran-1976-case-file.pdf) (113 pages, including the dia assessment, public domain).
+
+- **date:** early hours of september 19, 1976
+- **location:** tehran, iran
+- **overview:** after midnight, numerous citizens reported a bright, multicolored object over central tehran; the iranian air force scrambled two f-4 phantoms. the first lost all instruments and communications at 25 nautical miles from the target, recovering after breaking off; the second (pilot maj. parviz jafari) got a radar lock (return the size of a boeing 707) — and as he prepared to fire an aim-9, his weapons panel failed while a smaller glowing object detached from the main one and dove at his jet; jafari evaded by diving.
+- **key witnesses / evidence:** a u.s. defense intelligence agency (dia) report (written by attaché lt. col. olin mooy based on direct debriefing of iranian personnel), distributed to the white house, the secretary of state, the joint chiefs, the nsa, and the cia — now declassified; jafari testified publicly at the national press club in washington in 2007.
+- **official conclusion:** the dia report assessed it as a &quot;genuine report with anomalous characteristics&quot; and was never withdrawn; no final explanation.
+- **credibility: high.** reason: electromagnetic interference effects repeated on two independent jets, plus a formal dia intelligence assessment — among the highest-grade military cases of the cold war.
+- **confirmed:** the intercept, the instrument failures, the dia report. **unconfirmed:** the object&#x27;s origin (jafari personally leans toward a non-terrestrial explanation, but that is his view, not an evidentiary conclusion).
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 12 · The Tehran 1976 F-4 Intercept</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">Early hours of September 19, 1976 ｜ Tehran, Iran</div>
+      <div class="case-body"><ul>
+<li><strong>Source material:</strong> <a href="../media/tehran1976/tehran-1976-case-file.pdf" target="_blank" rel="noopener">Tehran 1976 declassified file collection</a> (113 pages, including the DIA assessment, public domain).</li>
+</ul>
+<ul>
+<li><strong>Date:</strong> Early hours of September 19, 1976</li>
+<li><strong>Location:</strong> Tehran, Iran</li>
+<li><strong>Overview:</strong> After midnight, numerous citizens reported a bright, multicolored object over central Tehran; the Iranian Air Force scrambled two F-4 Phantoms. The first lost all instruments and communications at 25 nautical miles from the target, recovering after breaking off; the second (pilot Maj. Parviz Jafari) got a radar lock (return the size of a Boeing 707) — and as he prepared to fire an AIM-9, his weapons panel failed while a smaller glowing object detached from the main one and dove at his jet; Jafari evaded by diving.</li>
+<li><strong>Key witnesses / evidence:</strong> A U.S. Defense Intelligence Agency (DIA) report (written by attaché Lt. Col. Olin Mooy based on direct debriefing of Iranian personnel), distributed to the White House, the Secretary of State, the Joint Chiefs, the NSA, and the CIA — now declassified; Jafari testified publicly at the National Press Club in Washington in 2007.</li>
+<li><strong>Official conclusion:</strong> The DIA report assessed it as a &quot;genuine report with anomalous characteristics&quot; and was never withdrawn; no final explanation.</li>
+<li><strong>Credibility: High.</strong> Reason: electromagnetic interference effects repeated on two independent jets, plus a formal DIA intelligence assessment — among the highest-grade military cases of the Cold War.</li>
+<li><strong>Confirmed:</strong> the intercept, the instrument failures, the DIA report. <strong>Unconfirmed:</strong> the object&#x27;s origin (Jafari personally leans toward a non-terrestrial explanation, but that is his view, not an evidentiary conclusion).</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 13 · japan airlines flight 1628 (1986) november 17, 1986 over alaska, usa 
+- **date:** november 17, 1986
+- **location:** over alaska, usa
+- **overview:** the crew of jal 1628, a boeing 747 freighter (paris–anchorage–tokyo) — capt. kenju terauchi (a former fighter pilot with 10,000+ hours) and two crew — reported two glowing objects pacing them, then a &quot;huge mothership&quot; (&quot;as big as two aircraft carriers,&quot; in terauchi&#x27;s words) appearing and tracking them for about 50 minutes, the cockpit bathed in bright light.
+- **key witnesses / evidence:** consistent statements and hand-drawn sketches from all three crew; faa and military radar initially confirmed tracking an unknown target (later walked back as possible weather returns); an faa spokesman finally said he &quot;accepted the crew&#x27;s description but could not confirm what they saw.&quot;
+- **official conclusion:** the faa offered no definitive explanation; skeptics suggested jupiter and mars misidentification.
+- **credibility: high.** reason: three professional aircrew, a long, multi-phase sighting, with radar confirmation — even though officials later retreated. the planet-misidentification theory struggles to explain the radar returns and 50 minutes of pacing maneuvers.
+- **confirmed:** the crew&#x27;s report, the radar confirmation, the faa&#x27;s ambiguous ending. **unconfirmed:** the &quot;mothership&quot; size description (huge glowing objects at night are easily overestimated in size).
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 13 · Japan Airlines Flight 1628 (1986)</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">November 17, 1986 ｜ Over Alaska, USA</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> November 17, 1986</li>
+<li><strong>Location:</strong> Over Alaska, USA</li>
+<li><strong>Overview:</strong> The crew of JAL 1628, a Boeing 747 freighter (Paris–Anchorage–Tokyo) — Capt. Kenju Terauchi (a former fighter pilot with 10,000+ hours) and two crew — reported two glowing objects pacing them, then a &quot;huge mothership&quot; (&quot;as big as two aircraft carriers,&quot; in Terauchi&#x27;s words) appearing and tracking them for about 50 minutes, the cockpit bathed in bright light.</li>
+<li><strong>Key witnesses / evidence:</strong> Consistent statements and hand-drawn sketches from all three crew; FAA and military radar initially confirmed tracking an unknown target (later walked back as possible weather returns); an FAA spokesman finally said he &quot;accepted the crew&#x27;s description but could not confirm what they saw.&quot;</li>
+<li><strong>Official conclusion:</strong> The FAA offered no definitive explanation; skeptics suggested Jupiter and Mars misidentification.</li>
+<li><strong>Credibility: High.</strong> Reason: three professional aircrew, a long, multi-phase sighting, with radar confirmation — even though officials later retreated. The planet-misidentification theory struggles to explain the radar returns and 50 minutes of pacing maneuvers.</li>
+<li><strong>Confirmed:</strong> the crew&#x27;s report, the radar confirmation, the FAA&#x27;s ambiguous ending. <strong>Unconfirmed:</strong> the &quot;mothership&quot; size description (huge glowing objects at night are easily overestimated in size).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 14 · the o&#x27;hare airport incident (2006) november 7, 2006, around 16:15 chicago o&#x27;hare international airport, usa, above united airlines gate c17 
+- **date:** november 7, 2006, around 16:15
+- **location:** chicago o&#x27;hare international airport, usa, above united airlines gate c17
+- **overview:** about 12 united employees (pilots, mechanics, dispatchers, managers) saw a dark-gray metallic disc hovering silently at ~1,500 feet above gate c17 for several minutes, then ascending vertically at high speed, punching a clear circular hole in the 1,900-foot cloud deck — the hole persisted for over ten minutes before closing.
+- **key witnesses / evidence:** consistent statements from a dozen-plus aviation professionals; faa internal call recordings (obtained via foia); a narcap technical report.
+- **official conclusion:** the faa declined to investigate, calling it a &quot;weather phenomenon,&quot; without explaining how weather punches a circular hole in clouds; no radar records.
+- **credibility: mid.** reason: high-quality, numerous witnesses, plus the rare described physical effect of the &quot;cloud hole&quot;; but no imagery, no radar, and some disagreement among witnesses on shape details. the faa&#x27;s manner of response is itself part of the controversy.
+- **confirmed:** the multiple sightings, the faa call recordings. **unconfirmed:** the cause of the cloud hole (narcap&#x27;s estimate of ~9.4 kj/m³ required energy is a speculative calculation).
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 14 · The O&#x27;Hare Airport Incident (2006)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">November 7, 2006, around 16:15 ｜ Chicago O&#x27;Hare International Airport, USA, above United Airlines Gate C17</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> November 7, 2006, around 16:15</li>
+<li><strong>Location:</strong> Chicago O&#x27;Hare International Airport, USA, above United Airlines Gate C17</li>
+<li><strong>Overview:</strong> About 12 United employees (pilots, mechanics, dispatchers, managers) saw a dark-gray metallic disc hovering silently at ~1,500 feet above Gate C17 for several minutes, then ascending vertically at high speed, punching a clear circular hole in the 1,900-foot cloud deck — the hole persisted for over ten minutes before closing.</li>
+<li><strong>Key witnesses / evidence:</strong> Consistent statements from a dozen-plus aviation professionals; FAA internal call recordings (obtained via FOIA); a NARCAP technical report.</li>
+<li><strong>Official conclusion:</strong> The FAA declined to investigate, calling it a &quot;weather phenomenon,&quot; without explaining how weather punches a circular hole in clouds; no radar records.</li>
+<li><strong>Credibility: Mid.</strong> Reason: high-quality, numerous witnesses, plus the rare described physical effect of the &quot;cloud hole&quot;; but no imagery, no radar, and some disagreement among witnesses on shape details. The FAA&#x27;s manner of response is itself part of the controversy.</li>
+<li><strong>Confirmed:</strong> the multiple sightings, the FAA call recordings. <strong>Unconfirmed:</strong> the cause of the cloud hole (NARCAP&#x27;s estimate of ~9.4 kJ/m³ required energy is a speculative calculation).</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 15 · the socorro / zamora incident (1964) april 24, 1964 outside socorro, new mexico, usa 
+- **date:** april 24, 1964
+- **location:** outside socorro, new mexico, usa
+- **overview:** police officer lonnie zamora, chasing a speeding car, saw an egg-shaped craft landing in the distance with two small figures beside it; as he approached, the object blasted upward with flame, leaving scorched ground and four indentations.
+- **key witnesses / evidence:** zamora (a professional police officer with a good reputation); landing traces examined by fbi and air force investigators; j. allen hynek, scientific consultant to project blue book, investigated in person.
+- **official conclusion:** project blue book listed it as &quot;unidentified&quot; — one of the few famous cases in the blue book files never given a prosaic classification.
+- **credibility: high.** reason: a credible professional witness + physical traces + an official &quot;unidentified&quot; rating — all three present.
+- **confirmed:** the landing traces, blue book&#x27;s &quot;unidentified&quot; conclusion. **unconfirmed:** the details of the &quot;small figures&quot; (seen by zamora alone).
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 15 · The Socorro / Zamora Incident (1964)</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">April 24, 1964 ｜ Outside Socorro, New Mexico, USA</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> April 24, 1964</li>
+<li><strong>Location:</strong> Outside Socorro, New Mexico, USA</li>
+<li><strong>Overview:</strong> Police officer Lonnie Zamora, chasing a speeding car, saw an egg-shaped craft landing in the distance with two small figures beside it; as he approached, the object blasted upward with flame, leaving scorched ground and four indentations.</li>
+<li><strong>Key witnesses / evidence:</strong> Zamora (a professional police officer with a good reputation); landing traces examined by FBI and Air Force investigators; J. Allen Hynek, scientific consultant to Project Blue Book, investigated in person.</li>
+<li><strong>Official conclusion:</strong> Project Blue Book listed it as &quot;unidentified&quot; — one of the few famous cases in the Blue Book files never given a prosaic classification.</li>
+<li><strong>Credibility: High.</strong> Reason: a credible professional witness + physical traces + an official &quot;unidentified&quot; rating — all three present.</li>
+<li><strong>Confirmed:</strong> the landing traces, Blue Book&#x27;s &quot;unidentified&quot; conclusion. <strong>Unconfirmed:</strong> the details of the &quot;small figures&quot; (seen by Zamora alone).</li>
+</ul></div>
+    </article>
+    <article class="case high" data-search="case 16 · the malmstrom afb missile incident (1967) march 16, 1967 (echo flight) missile fields of malmstrom air force base, montana, usa 
+- **date:** march 16, 1967 (echo flight)
+- **location:** missile fields of malmstrom air force base, montana, usa
+- **overview:** as an unknown luminous object appeared over the missile silos, ten minuteman icbms went offline one after another (into &quot;no-go&quot; status). missile officers capt. robert salas and lt. bob jamison experienced and reported it from separate launch control centers.
+- **key witnesses / evidence:** testimony from both launch officers; air force message traffic documenting the missiles going offline.
+- **official conclusion:** the air force blamed electromagnetic pulses / equipment malfunction, unrelated to ufos — but never explained why ten independent systems failed simultaneously.
+- **credibility: high.** reason: the anomalous shutdown of nuclear weapons systems is on written record, and the witnesses were officers on duty. this is the hardest case in the &quot;ufos and nuclear facilities&quot; series (others include the 1975 multi-base intrusions; rendlesham in 1980 was also beside a nuclear base).
+- **confirmed:** the missile-offline records, the witnesses&#x27; testimony. **unconfirmed:** a causal link between the unknown object and the missile failures (temporal correlation ≠ causation — the logic line must be flagged).
+
+" data-cred="high">
+      <div class="case-head">
+        <h3>Case 16 · The Malmstrom AFB Missile Incident (1967)</h3>
+        <span class="cred cred-high">Credibility: High</span>
+      </div>
+      <div class="case-meta">March 16, 1967 (Echo Flight) ｜ Missile fields of Malmstrom Air Force Base, Montana, USA</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> March 16, 1967 (Echo Flight)</li>
+<li><strong>Location:</strong> Missile fields of Malmstrom Air Force Base, Montana, USA</li>
+<li><strong>Overview:</strong> As an unknown luminous object appeared over the missile silos, ten Minuteman ICBMs went offline one after another (into &quot;no-go&quot; status). Missile officers Capt. Robert Salas and Lt. Bob Jamison experienced and reported it from separate launch control centers.</li>
+<li><strong>Key witnesses / evidence:</strong> Testimony from both launch officers; Air Force message traffic documenting the missiles going offline.</li>
+<li><strong>Official conclusion:</strong> The Air Force blamed electromagnetic pulses / equipment malfunction, unrelated to UFOs — but never explained why ten independent systems failed simultaneously.</li>
+<li><strong>Credibility: High.</strong> Reason: the anomalous shutdown of nuclear weapons systems is on written record, and the witnesses were officers on duty. This is the hardest case in the &quot;UFOs and nuclear facilities&quot; series (others include the 1975 multi-base intrusions; Rendlesham in 1980 was also beside a nuclear base).</li>
+<li><strong>Confirmed:</strong> the missile-offline records, the witnesses&#x27; testimony. <strong>Unconfirmed:</strong> a causal link between the unknown object and the missile failures (temporal correlation ≠ causation — the logic line must be flagged).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 17 · the westall school incident (1966) april 6, 1966 westall high school, melbourne, australia 
+- **date:** april 6, 1966
+- **location:** westall high school, melbourne, australia
+- **overview:** more than 200 students and teachers watched a disc-shaped object hover low over a grassy area near the school, then land (or fly near the ground), before rapidly ascending and departing. the event was covered in australian media at the time.
+- **key witnesses / evidence:** the mass sighting by 200+ students and staff (mostly teenagers); contemporary coverage including the age.
+- **official conclusion:** officials offered a &quot;weather balloon&quot; explanation, which witnesses widely rejected; the school principal was reportedly told not to discuss the incident (from participants&#x27; recollections — not fully confirmed).
+- **credibility: mid.** reason: large numbers and highly consistent accounts are strengths; but the witnesses were mostly minors, the event is decades old, and there is no imagery or physical evidence. the &quot;school was silenced&quot; claim is unverified and must be flagged as such.
+- **confirmed:** the mass sighting, the contemporary media coverage. **unconfirmed:** the landing details, the &quot;silencing&quot; episode.
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 17 · The Westall School Incident (1966)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">April 6, 1966 ｜ Westall High School, Melbourne, Australia</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> April 6, 1966</li>
+<li><strong>Location:</strong> Westall High School, Melbourne, Australia</li>
+<li><strong>Overview:</strong> More than 200 students and teachers watched a disc-shaped object hover low over a grassy area near the school, then land (or fly near the ground), before rapidly ascending and departing. The event was covered in Australian media at the time.</li>
+<li><strong>Key witnesses / evidence:</strong> The mass sighting by 200+ students and staff (mostly teenagers); contemporary coverage including The Age.</li>
+<li><strong>Official conclusion:</strong> Officials offered a &quot;weather balloon&quot; explanation, which witnesses widely rejected; the school principal was reportedly told not to discuss the incident (from participants&#x27; recollections — not fully confirmed).</li>
+<li><strong>Credibility: Mid.</strong> Reason: large numbers and highly consistent accounts are strengths; but the witnesses were mostly minors, the event is decades old, and there is no imagery or physical evidence. The &quot;school was silenced&quot; claim is unverified and must be flagged as such.</li>
+<li><strong>Confirmed:</strong> the mass sighting, the contemporary media coverage. <strong>Unconfirmed:</strong> the landing details, the &quot;silencing&quot; episode.</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 18 · the ariel school incident (1994) september 16, 1994 ariel school, ruwa, zimbabwe 
+- **date:** september 16, 1994
+- **location:** ariel school, ruwa, zimbabwe
+- **overview:** during recess, 62 children aged 8–12 saw a glowing disc land in the bush beside the school, with &quot;small figures&quot; emerging; the children described strikingly consistent details (large eyes, tight-fitting suits) and drew similar pictures. harvard psychiatrist john mack traveled there to investigate.
+- **key witnesses / evidence:** consistent statements and drawings from 62 children; mack&#x27;s investigation records; bbc documentary footage.
+- **official conclusion:** no official investigation; skeptics suggested mass hysteria or a hoax.
+- **credibility: mid.** reason: the numbers, the consistency of detail, and the spontaneously similar drawings across a cultural context are hard to dismiss as simple &quot;coaching&quot;; but all witnesses were children, there were no adult witnesses and no physical evidence — a real weakness. mack&#x27;s own academic reputation later suffered from this line of research, which must be noted honestly.
+- **confirmed:** the children&#x27;s statements and drawings. **unconfirmed:** the relayed content such as &quot;the aliens delivered an environmental message&quot; (the children&#x27;s later elaborations).
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 18 · The Ariel School Incident (1994)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">September 16, 1994 ｜ Ariel School, Ruwa, Zimbabwe</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> September 16, 1994</li>
+<li><strong>Location:</strong> Ariel School, Ruwa, Zimbabwe</li>
+<li><strong>Overview:</strong> During recess, 62 children aged 8–12 saw a glowing disc land in the bush beside the school, with &quot;small figures&quot; emerging; the children described strikingly consistent details (large eyes, tight-fitting suits) and drew similar pictures. Harvard psychiatrist John Mack traveled there to investigate.</li>
+<li><strong>Key witnesses / evidence:</strong> Consistent statements and drawings from 62 children; Mack&#x27;s investigation records; BBC documentary footage.</li>
+<li><strong>Official conclusion:</strong> No official investigation; skeptics suggested mass hysteria or a hoax.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the numbers, the consistency of detail, and the spontaneously similar drawings across a cultural context are hard to dismiss as simple &quot;coaching&quot;; but all witnesses were children, there were no adult witnesses and no physical evidence — a real weakness. Mack&#x27;s own academic reputation later suffered from this line of research, which must be noted honestly.</li>
+<li><strong>Confirmed:</strong> the children&#x27;s statements and drawings. <strong>Unconfirmed:</strong> the relayed content such as &quot;the aliens delivered an environmental message&quot; (the children&#x27;s later elaborations).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 19 · the kecksburg incident (1965) december 9, 1965 kecksburg, pennsylvania, usa 
+- **date:** december 9, 1965
+- **location:** kecksburg, pennsylvania, usa
+- **overview:** residents across multiple states saw a huge fireball cross the sky; kecksburg locals reported an acorn-shaped object falling into the woods, after which the military swiftly cordoned off the site and hauled &quot;something&quot; away.
+- **key witnesses / evidence:** numerous fireball witnesses; local residents&#x27; accounts of the military cordon; nasa admitted in 2005 that related records were &quot;lost.&quot;
+- **official conclusion:** the air force said it was a meteor; researchers noted the soviet venus probe cosmos 96 re-entered the atmosphere that same day, with matching time and trajectory.
+- **credibility: mid.** reason: the fireball and the fallen object are two different things — the fireball was most likely a meteor/space debris, but the multiple witness accounts of &quot;the military cordoning off and removing an object&quot; have never been convincingly explained. the &quot;cosmos 96&quot; theory is currently the strongest conventional explanation, but the soviets never confirmed it.
+- **confirmed:** the fireball, the military presence. **unconfirmed:** the &quot;acorn-shaped object&quot; that was removed (no photos, no debris).
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 19 · The Kecksburg Incident (1965)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">December 9, 1965 ｜ Kecksburg, Pennsylvania, USA</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> December 9, 1965</li>
+<li><strong>Location:</strong> Kecksburg, Pennsylvania, USA</li>
+<li><strong>Overview:</strong> Residents across multiple states saw a huge fireball cross the sky; Kecksburg locals reported an acorn-shaped object falling into the woods, after which the military swiftly cordoned off the site and hauled &quot;something&quot; away.</li>
+<li><strong>Key witnesses / evidence:</strong> Numerous fireball witnesses; local residents&#x27; accounts of the military cordon; NASA admitted in 2005 that related records were &quot;lost.&quot;</li>
+<li><strong>Official conclusion:</strong> The Air Force said it was a meteor; researchers noted the Soviet Venus probe Cosmos 96 re-entered the atmosphere that same day, with matching time and trajectory.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the fireball and the fallen object are two different things — the fireball was most likely a meteor/space debris, but the multiple witness accounts of &quot;the military cordoning off and removing an object&quot; have never been convincingly explained. The &quot;Cosmos 96&quot; theory is currently the strongest conventional explanation, but the Soviets never confirmed it.</li>
+<li><strong>Confirmed:</strong> the fireball, the military presence. <strong>Unconfirmed:</strong> the &quot;acorn-shaped object&quot; that was removed (no photos, no debris).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 20 · the valensole incident (1965) july 1, 1965 valensole, provence, france 
+- **date:** july 1, 1965
+- **location:** valensole, provence, france
+- **overview:** farmer maurice masse saw a rugby-ball-shaped craft and two small figures in his lavender field; when he tried to approach, a beam of light &quot;froze&quot; him in place; about 15 minutes later the object lifted off, leaving indentations and soil changes.
+- **key witnesses / evidence:** masse&#x27;s account; an investigation by gepan (france&#x27;s official ufo research body under the space agency), which confirmed the landing traces; soil samples were sent for testing.
+- **official conclusion:** gepan classified it &quot;unexplained&quot; (category d).
+- **credibility: mid.** reason: a formal investigation and &quot;unexplained&quot; rating by a french state body are pluses; but it is essentially a single-witness case, and masse later refused to discuss it further, so it cannot be re-examined.
+- **confirmed:** the landing traces, the gepan investigation record. **unconfirmed:** the physiological mechanism of the &quot;paralyzing beam.&quot;
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 20 · The Valensole Incident (1965)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">July 1, 1965 ｜ Valensole, Provence, France</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> July 1, 1965</li>
+<li><strong>Location:</strong> Valensole, Provence, France</li>
+<li><strong>Overview:</strong> Farmer Maurice Masse saw a rugby-ball-shaped craft and two small figures in his lavender field; when he tried to approach, a beam of light &quot;froze&quot; him in place; about 15 minutes later the object lifted off, leaving indentations and soil changes.</li>
+<li><strong>Key witnesses / evidence:</strong> Masse&#x27;s account; an investigation by GEPAN (France&#x27;s official UFO research body under the space agency), which confirmed the landing traces; soil samples were sent for testing.</li>
+<li><strong>Official conclusion:</strong> GEPAN classified it &quot;unexplained&quot; (Category D).</li>
+<li><strong>Credibility: Mid.</strong> Reason: a formal investigation and &quot;unexplained&quot; rating by a French state body are pluses; but it is essentially a single-witness case, and Masse later refused to discuss it further, so it cannot be re-examined.</li>
+<li><strong>Confirmed:</strong> the landing traces, the GEPAN investigation record. <strong>Unconfirmed:</strong> the physiological mechanism of the &quot;paralyzing beam.&quot;</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 21 · the cash–landrum incident (1980) december 29, 1980 piney woods northeast of houston, texas, usa 
+- **date:** december 29, 1980
+- **location:** piney woods northeast of houston, texas, usa
+- **overview:** betty cash, vickie landrum, and her grandson colby encountered a huge flame-spewing diamond-shaped object hovering low, accompanied by 20+ helicopters; all three afterward developed radiation-sickness-like symptoms (nausea, hair loss, skin burns), with betty hospitalized for nearly a month.
+- **key witnesses / evidence:** consistent accounts from all three; hospital medical records (the symptoms were real); the witnesses sued the u.s. government in 1981 (dismissed in 1986, the court finding no proof the craft belonged to the u.s. military).
+- **official conclusion:** the lawsuit was dismissed; no official body has linked the event to any known aircraft.
+- **credibility: mid.** reason: the medical records of bodily harm are real, and the &quot;flaming diamond + helicopter fleet&quot; combination points to some human military activity (e.g., a test-vehicle accident) that cannot be ruled out; but &quot;the u.s. government owned the craft&quot; was never proven, and the suit was dismissed.
+- **confirmed:** the medical records, the lawsuit and its dismissal. **unconfirmed:** the craft&#x27;s ownership (both the military-test-vehicle and the &quot;non-human craft&quot; hypotheses are just hypotheses).
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 21 · The Cash–Landrum Incident (1980)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">December 29, 1980 ｜ Piney woods northeast of Houston, Texas, USA</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> December 29, 1980</li>
+<li><strong>Location:</strong> Piney woods northeast of Houston, Texas, USA</li>
+<li><strong>Overview:</strong> Betty Cash, Vickie Landrum, and her grandson Colby encountered a huge flame-spewing diamond-shaped object hovering low, accompanied by 20+ helicopters; all three afterward developed radiation-sickness-like symptoms (nausea, hair loss, skin burns), with Betty hospitalized for nearly a month.</li>
+<li><strong>Key witnesses / evidence:</strong> Consistent accounts from all three; hospital medical records (the symptoms were real); the witnesses sued the U.S. government in 1981 (dismissed in 1986, the court finding no proof the craft belonged to the U.S. military).</li>
+<li><strong>Official conclusion:</strong> The lawsuit was dismissed; no official body has linked the event to any known aircraft.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the medical records of bodily harm are real, and the &quot;flaming diamond + helicopter fleet&quot; combination points to some human military activity (e.g., a test-vehicle accident) that cannot be ruled out; but &quot;the U.S. government owned the craft&quot; was never proven, and the suit was dismissed.</li>
+<li><strong>Confirmed:</strong> the medical records, the lawsuit and its dismissal. <strong>Unconfirmed:</strong> the craft&#x27;s ownership (both the military-test-vehicle and the &quot;non-human craft&quot; hypotheses are just hypotheses).</li>
+</ul></div>
+    </article>
+    <article class="case mid" data-search="case 22 · the disappearance of frederick valentich (1978) october 21, 1978 over bass strait, australia 
+- **date:** october 21, 1978
+- **location:** over bass strait, australia
+- **overview:** frederick valentich, a 20-year-old pilot, flying a cessna 182 from melbourne to king island, radioed air traffic control that &quot;a strange aircraft&quot; was pacing him, describing it as &quot;not an aircraft&quot;; radio contact ended about 6 minutes later, the last sounds being a &quot;metallic scraping noise.&quot; neither the plane nor the pilot was ever found.
+- **key witnesses / evidence:** the complete atc audio recording (public); official search-and-rescue records.
+- **official conclusion:** australia&#x27;s transport department investigation suggested spatial disorientation leading to a crash at sea (&quot;graveyard spiral&quot;), but could not explain the radio content; no wreckage was ever found.
+- **credibility: mid.** reason: the disappearance is a fact and the radio recording is hard evidence; but &quot;a ufo caused the disappearance&quot; is only an inference from the radio content — pilot error combined with a coincidental sighting of another aircraft or celestial body cannot be ruled out.
+- **confirmed:** the disappearance, the radio recording. **unconfirmed:** a causal link between the disappearance and an unidentified craft.
+
+" data-cred="mid">
+      <div class="case-head">
+        <h3>Case 22 · The Disappearance of Frederick Valentich (1978)</h3>
+        <span class="cred cred-mid">Credibility: Mid</span>
+      </div>
+      <div class="case-meta">October 21, 1978 ｜ Over Bass Strait, Australia</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> October 21, 1978</li>
+<li><strong>Location:</strong> Over Bass Strait, Australia</li>
+<li><strong>Overview:</strong> Frederick Valentich, a 20-year-old pilot, flying a Cessna 182 from Melbourne to King Island, radioed air traffic control that &quot;a strange aircraft&quot; was pacing him, describing it as &quot;not an aircraft&quot;; radio contact ended about 6 minutes later, the last sounds being a &quot;metallic scraping noise.&quot; Neither the plane nor the pilot was ever found.</li>
+<li><strong>Key witnesses / evidence:</strong> The complete ATC audio recording (public); official search-and-rescue records.</li>
+<li><strong>Official conclusion:</strong> Australia&#x27;s transport department investigation suggested spatial disorientation leading to a crash at sea (&quot;graveyard spiral&quot;), but could not explain the radio content; no wreckage was ever found.</li>
+<li><strong>Credibility: Mid.</strong> Reason: the disappearance is a fact and the radio recording is hard evidence; but &quot;a UFO caused the disappearance&quot; is only an inference from the radio content — pilot error combined with a coincidental sighting of another aircraft or celestial body cannot be ruled out.</li>
+<li><strong>Confirmed:</strong> the disappearance, the radio recording. <strong>Unconfirmed:</strong> a causal link between the disappearance and an unidentified craft.</li>
+</ul></div>
+    </article>
+    <article class="case " data-search="case 23 · the mexican air force &quot;campeche&quot; video (2004) — appendix: since explained march 5, 2004 over campeche, mexico 
+- **date:** march 5, 2004
+- **location:** over campeche, mexico
+- **overview:** a mexican air force merlin c26a patrol aircraft filmed 11 blazing orbs with its infrared pod; mexico&#x27;s defense ministry released the video voluntarily, causing a sensation.
+- **key witnesses / evidence:** the genuine military infrared video; crew testimony.
+- **official conclusion:** follow-up analysis (including assessment with france&#x27;s cnes participating) identified the orbs as natural-gas flares at the cantarell oil field — oil-field flares look exactly like these &quot;blazing orbs&quot; in infrared, and the bearings matched. this is the classic counterexample of a &quot;military video + official release&quot; that got a conventional explanation; it is included as a reminder that **even military infrared video can be misread**.
+- **credibility: low as an &quot;anomaly case&quot; (explained); high value as a &quot;methodology warning case.&quot;**
+- **confirmed:** the video is genuine, the oil-flare explanation. **unconfirmed:** none (this case is closed).
+
+---
+
+" data-cred="?">
+      <div class="case-head">
+        <h3>Case 23 · The Mexican Air Force &quot;Campeche&quot; Video (2004) — appendix: since explained</h3>
+        <span class="cred cred-">?</span>
+      </div>
+      <div class="case-meta">March 5, 2004 ｜ Over Campeche, Mexico</div>
+      <div class="case-body"><ul>
+<li><strong>Date:</strong> March 5, 2004</li>
+<li><strong>Location:</strong> Over Campeche, Mexico</li>
+<li><strong>Overview:</strong> A Mexican Air Force Merlin C26A patrol aircraft filmed 11 blazing orbs with its infrared pod; Mexico&#x27;s defense ministry released the video voluntarily, causing a sensation.</li>
+<li><strong>Key witnesses / evidence:</strong> The genuine military infrared video; crew testimony.</li>
+<li><strong>Official conclusion:</strong> Follow-up analysis (including assessment with France&#x27;s CNES participating) identified the orbs as natural-gas flares at the Cantarell oil field — oil-field flares look exactly like these &quot;blazing orbs&quot; in infrared, and the bearings matched. This is the classic counterexample of a &quot;military video + official release&quot; that got a conventional explanation; it is included as a reminder that <strong>even military infrared video can be misread</strong>.</li>
+<li><strong>Credibility: low as an &quot;anomaly case&quot; (explained); high value as a &quot;methodology warning case.&quot;</strong></li>
+<li><strong>Confirmed:</strong> the video is genuine, the oil-flare explanation. <strong>Unconfirmed:</strong> none (this case is closed).</li>
+</ul>
+<p>-<br>-<br>-</p></div>
+    </article>
+</div>
+</section>
+<section id="debunked">
+<h2>Part 2 · Debunked / Excluded List</h2>
+<div class="sec-desc">The site's "firewall": cases once widely circulated but proven hoaxes with solid evidence, or with accepted conventional explanations. New submissions must pass this gate first.</div>
+<blockquote>The cases below were once widely circulated but have since been proven hoaxes with solid evidence, or have received accepted conventional explanations. The archive keeps them as &quot;mine clearance,&quot; so the site never cites them in ways that would damage its credibility.</blockquote><article class='deb'><div class='deb-group'>A. Confirmed Hoaxes</div><h3><strong>A1 · Billy Meier&#x27;s photos and contact story (1970s–)</strong></h3><div class='case-body'><ul>
+<li>A Swiss farmer who claimed long-term contact with &quot;Plejarens&quot; from the Pleiades and took many crisp &quot;spacecraft&quot; photos.</li>
+<li><strong>Debunked:</strong> His ex-wife Kalliope said in a 1997 interview that the photos were models her husband made from trash-can lids, tacks, and household items; the alleged &quot;alien woman&quot; photo was proven to be a still of a Golddiggers dancer from The Dean Martin Show; the &quot;dinosaur photo&quot; was lifted from a children&#x27;s book illustration; digital scan analysis showed the &quot;wedding-cake UFO&quot; matched a trash-can lid&#x27;s geometry exactly.</li>
+<li>Conclusion: systematic fraud. The site must <strong>never</strong> cite his photos as evidence.</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>A. Confirmed Hoaxes</div><h3><strong>A2 · The Morristown hoax (2009)</strong></h3><div class='case-body'><ul>
+<li>In January–February 2009, red lights appeared over Morristown, New Jersey, on five consecutive nights; media and MUFON briefly treated it as a major sighting.</li>
+<li><strong>Debunked:</strong> Joe Rudy and Chris Russo admitted on April 1, 2009, that the lights were road flares tied to helium balloons — a self-described &quot;social experiment.&quot; Both were convicted of disorderly conduct, fined $250 plus 50 hours of community service.</li>
+<li>Conclusion: admitted hoax. Warning value: witness testimony (including &quot;credible professionals&quot;) + media hype ≠ truth.</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>A. Confirmed Hoaxes</div><h3><strong>A3 · George Adamski (the 1950s &quot;contactee&quot; pioneer)</strong></h3><div class='case-body'><ul>
+<li>Claimed a face-to-face meeting with the Venusian &quot;Orthon&quot; in the California desert in 1952, then published books like Flying Saucers Have Landed; his photos shaped a generation&#x27;s image of the &quot;flying saucer.&quot;</li>
+<li><strong>Debunked:</strong> Experts, including Blue Book scientific consultant Hynek, identified the photos as crude fakes (resembling cocktail shakers and lamp parts); &quot;secret government letters&quot; he displayed were admitted in 1985 by fellow researcher James Moseley to be his own prank forgeries; Venus&#x27;s surface environment (460°C, crushing acidic atmosphere) cannot host the humanoid civilization he described.</li>
+<li>Conclusion: fraud / fantasy. Historical significance only as the starting point of the &quot;contactee movement.&quot;</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>A. Confirmed Hoaxes</div><h3><strong>A4 · The Belgian Petit-Rechain triangle photo (1990)</strong></h3><div class='case-body'><ul>
+<li><strong>Teaching material:</strong> <a href="../media/belgium1990/petit-rechain-hoax-photo.jpg" target="_blank" rel="noopener">the hoax photo archived</a> (public domain). Kept by this archive as physical teaching material on &quot;famous UFO photo fraud.&quot;</li>
+<li>The most widely circulated &quot;black triangle with three lights&quot; photo of the Belgian wave era.</li>
+<li><strong>Debunked:</strong> The photographer admitted in 2011 it was a staged shot of a polystyrene-foam model with light bulbs.</li>
+<li>Conclusion: photo fraud. Note: this does not invalidate the radar and Air Force records of the whole Belgian wave (Case 05).</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>B. Accepted Conventional Explanations (Typical Misidentifications)</div><h3><strong>B1 · Venus / Jupiter misidentification</strong></h3><div class='case-body'><ul>
+<li>Venus can reach magnitude −4.6; low in the sky under atmospheric turbulence it can appear to &quot;hover, flicker, and change color&quot; — historically the most common source of UFO misidentification. Parts of Brazil&#x27;s 1977 &quot;Operation Saucer&quot; cases and many &quot;hovering glowing orb at dusk&quot; reports were later confirmed as Venus. President Carter&#x27;s famous 1969 sighting was also analyzed as Venus.</li>
+<li>Before the site cites any &quot;hovering luminous object&quot; case, planets must be ruled out first.</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>B. Accepted Conventional Explanations (Typical Misidentifications)</div><h3><strong>B2 · Starlink satellite trains (2019–)</strong></h3><div class='case-body'><ul>
+<li>In the 1–3 days after launch, SpaceX Starlink satellites appear as &quot;a row of evenly spaced lights flying in a straight line&quot;; multiple &quot;fleet sightings&quot; (Seattle 2019, Colorado 2020, and others) were later confirmed by orbital data to be Starlink. This is <strong>the most common contemporary source of UFO misidentification</strong>; any &quot;string of lights&quot; video must first be checked against launch schedules.</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>B. Accepted Conventional Explanations (Typical Misidentifications)</div><h3><strong>B3 · Flares</strong></h3><div class='case-body'><ul>
+<li>The second wave of the Phoenix Lights (1997, 22:00) and many &quot;red/orange light formations at night&quot; were military flares (slow descent, sequential burnout is the typical signature).</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>B. Accepted Conventional Explanations (Typical Misidentifications)</div><h3><strong>B4 · High-altitude balloons (including the 1948 Mantell incident)</strong></h3><div class='case-body'><ul>
+<li>On January 7, 1948, National Guard pilot Thomas Mantell died chasing an unknown object — later confirmed to be a &quot;Skyhook&quot; high-altitude balloon. This is the famous &quot;died chasing a UFO&quot; case; the truth was a balloon — included to set the record straight.</li>
+</ul></div></article>
+<article class='deb'><div class='deb-group'>B. Accepted Conventional Explanations (Typical Misidentifications)</div><h3><strong>B5 · Oil-field flares / ground lights misread in infrared</strong></h3><div class='case-body'><ul>
+<li>See Case 23 (Mexico Campeche, 2004). Infrared imaging renders ground heat sources as &quot;fireballs in the sky&quot;; infrared video must always be judged with geographic bearings.</li>
+</ul></div></article>
+</section>
+<section id="timeline">
+<h2>Part 3 · Government Programs & Disclosure Timeline</h2>
+<div class="sec-desc">1947 Project Blue Book → 2026 Pentagon releases. Officials have never acknowledged "alien spacecraft"; the position evolved: 1969 "no scientific value" → 2021 "phenomena are real, most unexplained" → 2024 "no empirical evidence of extraterrestrial technology."</div>
+<div class="timeline"><div class='tl-row'><div class='tl-time'>1947–1949</div><div class='tl-event'><strong>Project Sign</strong><p>The USAF&#x27;s first official UFO investigation program</p></div></div><div class='tl-row'><div class='tl-time'>1949–1952</div><div class='tl-event'><strong>Project Grudge</strong><p>Successor program, leaning toward debunking</p></div></div><div class='tl-row'><div class='tl-time'>1952–1969</div><div class='tl-event'><strong>Project Blue Book</strong><p>The Air Force&#x27;s most systematic investigation: 12,618 reports, 701 listed &quot;unexplained&quot; before closure</p></div></div><div class='tl-row'><div class='tl-time'>1968–1969</div><div class='tl-event'><strong>The Condon Report</strong><p>University of Colorado, commissioned by the Air Force; concluded &quot;UFO research has no scientific value,&quot; directly leading to Blue Book&#x27;s closure in December 1969. Its methods and conclusions remain disputed</p></div></div><div class='tl-row'><div class='tl-time'>2007–2012</div><div class='tl-event'><strong>AATIP (Advanced Aerospace Threat Identification Program)</strong><p>Secret Pentagon program, ~$22 million, pushed by Senator Harry Reid and contracted to Bigelow Aerospace; director Luis Elizondo resigned in 2017 and went public via The New York Times</p></div></div><div class='tl-row'><div class='tl-time'>Dec 2017</div><div class='tl-event'><strong>NYT exposes AATIP and three Navy videos</strong><p>The starting point of the modern UAP wave (the source of the Case 07 and 08 videos)</p></div></div><div class='tl-row'><div class='tl-time'>Aug 2020</div><div class='tl-event'><strong>UAP Task Force</strong><p>Established under Navy leadership, within the Office of Naval Intelligence</p></div></div><div class='tl-row'><div class='tl-time'>Jun 2021</div><div class='tl-event'><strong>ODNI preliminary assessment</strong><p>Office of the Director of National Intelligence: of 144 military reports, only 1 resolved, the rest unexplained; acknowledged the phenomena are real</p></div></div><div class='tl-row'><div class='tl-time'>May 2022</div><div class='tl-event'><strong>Congressional hearing (first in 50 years)</strong><p>House Intelligence Committee, military officials testified</p></div></div><div class='tl-row'><div class='tl-time'>Jul 2022</div><div class='tl-event'><strong>AARO founded (All-domain Anomaly Resolution Office)</strong><p>Replaced the UAP Task Force as the Pentagon&#x27;s standing investigative body</p></div></div><div class='tl-row'><div class='tl-time'>Apr 2023</div><div class='tl-event'><strong>AARO releases &quot;metallic sphere&quot; video</strong><p>First AARO director Sean Kirkpatrick showed a Senate hearing an MQ-9 drone video of a metallic-sphere UAP over the Middle East (filmed 2022), saying hundreds of similar reports existed worldwide. Archived here: <a href="../media/misc/middle-east-uap-2022.webm" target="_blank" rel="noopener">video</a> (21 seconds, public domain).</p></div></div><div class='tl-row'><div class='tl-time'>Jul 26, 2023</div><div class='tl-event'><strong>Congressional hearing: Grusch testifies</strong><p>Former intelligence officer David Grusch testified under oath that the U.S. has run a decades-long &quot;non-human craft retrieval and reverse-engineering program&quot; and recovered &quot;biological samples&quot;; Fravor (Case 07) and Graves testified alongside. <strong>Must be flagged:</strong> Grusch&#x27;s statements are hearsay — he admitted he never saw anything firsthand; AARO&#x27;s 2024 report says &quot;no empirical evidence found&quot;</p></div></div><div class='tl-row'><div class='tl-time'>Sep 14, 2023</div><div class='tl-event'><strong>NASA UAP independent study report</strong><p>16-member panel (chair David Spergel): no evidence of extraterrestrial origin found; criticized the poor quality of existing data; recommended NASA systematically collect data with Earth-observation satellites, AI, and a crowdsourcing app; appointed the first UAP research director</p></div></div><div class='tl-row'><div class='tl-time'>Mar 2024</div><div class='tl-event'><strong>AARO Historical Record Report, Vol. 1</strong><p>Covering 1945–2023: concluded no empirical evidence of U.S. government recovery/reverse-engineering of &quot;extraterrestrial technology&quot;; disclosed that a proposed reverse-engineering special project codenamed &quot;Kona Blue&quot; was rejected by the Department of Homeland Security</p></div></div><div class='tl-row'><div class='tl-time'>Nov 2024</div><div class='tl-event'><strong>Congressional hearing &quot;Unidentified&quot;</strong><p>Journalist Michael Shellenberger released a 13-minute HD video of a &quot;white sphere&quot; (filmed near Kuwait), among other material</p></div></div><div class='tl-row'><div class='tl-time'>Sep 9, 2025</div><div class='tl-event'><strong>Congressional hearing &quot;Restoring Trust&quot;</strong><p>An Air Force veteran testified to an &quot;iron triangle&quot; sighting, a former Navy petty officer described the USS Jackson incident; a claim surfaced of video showing &quot;a UAP taking a direct Hellfire missile hit&quot; (<strong>authenticity not independently verified</strong>)</p></div></div><div class='tl-row'><div class='tl-time'>2026</div><div class='tl-event'><strong>Pentagon releases UAP files in batches</strong><p>Per media reports, multi-batch declassification began (including video of the 2023 fighter shootdown of an unidentified object over Lake Huron). <strong>Note:</strong> as of this draft (Oct 2026), the releases are ongoing and await scholarly review — do not cite as settled conclusions</p></div></div></div>
+</section>
+<section id="method">
+<h2>Archiving Methodology & Usage Discipline</h2>
+<div class="sec-desc">Inclusion criteria, credibility ratings, terminology, five rules of discipline.</div>
+<h3>Inclusion Criteria (Case Files)</h3>
+<p>P<br>r<br>i<br>o<br>r<br>i<br>t<br>y<br> <br>i<br>s<br> <br>g<br>i<br>v<br>e<br>n<br> <br>t<br>o<br> <br>c<br>a<br>s<br>e<br>s<br> <br>m<br>e<br>e<br>t<br>i<br>n<br>g<br> <br>o<br>n<br>e<br> <br>o<br>r<br> <br>m<br>o<br>r<br>e<br> <br>o<br>f<br> <br>t<br>h<br>e<br> <br>f<br>o<br>l<br>l<br>o<br>w<br>i<br>n<br>g<br>:</p>
+<ul>
+<li>Multiple independent witnesses (including professional witnesses: pilots, military personnel, police, air traffic controllers)</li>
+<li>Simultaneous radar records (military/civilian)</li>
+<li>Official investigation files (military memos, intelligence reports, parliamentary hearing records)</li>
+<li>Clear imagery with an intact chain of custody</li>
+</ul>
+<h3>Credibility Ratings</h3>
+<ul>
+<li><strong>High</strong>: Cross-confirmed by multiple independent sources (witnesses + radar + official files); witnesses identifiable; the occurrence of the event itself is undisputed — only &quot;what it was&quot; is debated</li>
+<li><strong>Mid</strong>: Substantive evidence (imagery / multiple witnesses / physical traces) but with gaps in the evidence chain, or an official explanation that is &quot;plausible but not widely accepted&quot;</li>
+<li>This archive does not include &quot;Low&quot; credibility cases as primary entries; low-credibility or debunked items go into Part 2, the &quot;Debunked / Excluded List&quot;</li>
+</ul>
+<h3>Terminology</h3>
+<ul>
+<li><strong>Confirmed fact</strong>: Supported by documents, imagery, or official records; cross-verifiable</li>
+<li><strong>Unverified claim</strong>: Statements by involved parties, one-sided assertions, unverifiable inferences — even when on record, they must be labeled as such</li>
+</ul>
+<p>-<br>-<br>-</p>
+<ol>
+<li><strong>Write only what the evidence supports.</strong> Not &quot;alien spacecraft&quot; — write &quot;unexplained aircraft reports&quot;; not &quot;government cover-up&quot; — write &quot;not disclosed / declined to investigate by officials.&quot;</li>
+<li><strong>Disputes must be presented both-sided</strong> (e.g., SCU vs. AARO on Aguadilla, the parallax dispute on GoFast, the Mogul explanation for Roswell).</li>
+<li><strong>The debunk list is the site&#x27;s &quot;firewall&quot;:</strong> any new submission matching the A/B list&#x27;s features is sent back for more evidence first.</li>
+<li><strong>Date-stamping:</strong> this draft&#x27;s facts are current as of October 2026; follow-on developments from AARO, Congress, and NASA need continuous updates, and expired conclusions must be time-stamped.</li>
+<li><strong>This archive makes no assertion that &quot;non-human civilization exists.&quot;</strong> The archive&#x27;s position should be: &quot;Below are among the hardest-to-explain aerial anomaly events in the human record. The evidence is here; the judgment is yours.&quot;</li>
+</ul>
+<p>-<br>-<br>-</p>
+<p><<br>e<br>m<br>><br>D<br>r<br>a<br>f<br>t<br> <br>v<br>1<br>.<br>0<br> <br>·<br> <br>2<br>3<br> <br>c<br>a<br>s<br>e<br>s<br> <br>(<br>1<br>1<br> <br>r<br>e<br>q<br>u<br>i<br>r<br>e<br>d<br> <br>+<br> <br>1<br>2<br> <br>s<br>u<br>p<br>p<br>l<br>e<br>m<br>e<br>n<br>t<br>a<br>r<br>y<br>)<br>,<br> <br>9<br> <br>d<br>e<br>b<br>u<br>n<br>k<br>e<br>d<br>/<br>e<br>x<br>c<br>l<br>u<br>d<br>e<br>d<br> <br>r<br>e<br>c<br>o<br>r<br>d<br>s<br>,<br> <br>1<br>6<br> <br>g<br>o<br>v<br>e<br>r<br>n<br>m<br>e<br>n<br>t<br> <br>t<br>i<br>m<br>e<br>l<br>i<br>n<br>e<br> <br>e<br>n<br>t<br>r<br>i<br>e<br>s<br>.<br><<br>/<br>e<br>m<br>><br> <br><<br>e<br>m<br>><br>N<br>e<br>x<br>t<br> <br>s<br>t<br>e<br>p<br>s<br>:<br> <br>a<br>d<br>d<br> <br>o<br>r<br>i<br>g<br>i<br>n<br>a<br>l<br>-<br>f<br>i<br>l<br>e<br> <br>l<br>i<br>n<br>k<br>s<br> <br>a<br>n<br>d<br> <br>i<br>m<br>a<br>g<br>e<br>r<br>y<br> <br>i<br>n<br>d<br>e<br>x<br>e<br>s<br> <br>f<br>o<br>r<br> <br>e<br>a<br>c<br>h<br> <br>c<br>a<br>s<br>e<br>;<br> <br>b<br>u<br>i<br>l<br>d<br> <br>a<br> <br>s<br>u<br>b<br>m<br>i<br>s<br>s<br>i<br>o<br>n<br> <br>r<br>e<br>v<br>i<br>e<br>w<br> <br>w<br>o<br>r<br>k<br>f<br>l<br>o<br>w<br>.<br><<br>/<br>e<br>m<br>></p>
+</section>
+<section id="cost">
+<h2>Appendix · Website Cost & Monetization Analysis</h2>
+<div class="sec-desc">Estimated 2026-10-06. Recommended: overseas static hosting (Cloudflare Pages / Vercel, free) — yearly cost ~¥100 (domain only).</div>
+<h1>Archive of Non-Human Civilization · Website Cost &amp; Monetization Analysis</h1>
+<blockquote>Estimated: 2026-10-06 | Prices from Tencent Cloud / Alibaba Cloud public pages; promo prices expire — re-check before acting.</blockquote>
+<h2>Three Hosting Options</h2>
+<h3>Option A: Static site (recommended to start)</h3>
+<ul>
+<li>Tech: static pages generated from Markdown (a natural fit for this archive&#x27;s format)</li>
+<li>Hosting: GitHub Pages / Cloudflare Pages / Vercel, <strong>free</strong></li>
+<li>Domain: .com ~¥82–95/year (Alibaba Cloud: ¥95 regular, ¥82+ on promo; first year from ¥35)</li>
+<li>ICP filing: not needed (servers outside mainland China)</li>
+<li>CDN: Cloudflare free tier is enough</li>
+<li><strong>Yearly cost: ~¥100 (domain only)</strong></li>
+<li>Pros: near-zero cost, no maintenance, no server patching or security chores</li>
+<li>Cons: no admin backend, no native comments (free Giscus workaround exists); mediocre access speed from mainland China</li>
+</ul>
+<h3>Option B: China-based cloud server (fast access, can file for ICP)</h3>
+<ul>
+<li>Server: Tencent Cloud lightweight 2C2G ¥99/year; Alibaba Cloud ECS &quot;99 plan&quot; ¥99/year</li>
+<li>Domain: same as above, ~¥82–95/year</li>
+<li>ICP filing: free, ~2–4 weeks; required for China CDN and Baidu ad union</li>
+<li><strong>Yearly cost: ~¥200 (domain + server)</strong></li>
+<li>Pros: fast domestic access, extensible (search, comments, membership later)</li>
+<li>Cons: ICP filing process; you patch the OS yourself a few times a year</li>
+</ul>
+<h3>Option C: Hire a developer</h3>
+<ul>
+<li>One-time ¥5,000–20,000+, plus yearly maintenance. Not recommended for a small content site.</li>
+</ul>
+<h2>Honest Monetization Outlook</h2>
+<ol>
+<li><strong>Ads</strong>: Google AdSense (no ICP filing needed, but requires real traffic; a niche Chinese-language site earns tens to hundreds of RMB/month typically); Baidu Union (needs an ICP-filed domain)</li>
+<li><strong>Paid content</strong>: in-depth investigation reports, paid e-book downloads</li>
+<li><strong>Donations/tipping</strong>: platforms like Afdian</li>
+<li><strong>Merch</strong>: T-shirts, stickers — extremely niche</li>
+<li><strong>Reality check</strong>: UFO content is a niche within a niche; making real money from a Chinese UFO site is very hard. Treat it as a passion project — covering the ¥100–200/year cost is already a win. Build content and traffic for 6–12 months first, then talk monetization.</li>
+</ul>
+<h2>Compliance Notes</h2>
+<ul>
+<li>UFO content itself isn&#x27;t sensitive, but if the server is in mainland China and serves domestic visitors, get the ICP filing done</li>
+<li>Mark &quot;unverified&quot; cases clearly as unverified/disputed — don&#x27;t write them in a news tone</li>
+<li>Mind copyright on third-party photos/videos; prefer U.S. government public-domain imagery (e.g., Navy UAP videos)</li>
+</ul>
+</section>
+</main>
+<footer>Archive of Non-Human Civilization · Research Draft v1.0 · Compiled 2026-10-06 · Curator Peter · Research Assistant 小木</footer>
+<script>
+const q=document.getElementById('q'),cards=[...document.querySelectorAll('#case-list .case')],btns=[...document.querySelectorAll('.toolbar button')];
+let f='all';
+function apply(){const s=q.value.trim().toLowerCase();cards.forEach(c=>{const ok=(f==='all'||c.dataset.cred===f)&&(!s||c.dataset.search.includes(s));c.classList.toggle('hidden',!ok);});}
+q.addEventListener('input',apply);
+btns.forEach(b=>b.addEventListener('click',()=>{btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');f=b.dataset.f;apply();}));
+</script>
+</body>
+</html>
