@@ -13,6 +13,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(11,14,20,.92);backdrop-f
 .nav .logo{font-weight:800;letter-spacing:2px}
 .nav a{color:var(--dim);text-decoration:none;font-size:14px}
 .nav a:hover{color:var(--acc)}
+.nav .lang{margin-left:auto;border:1px solid var(--line);border-radius:20px;padding:4px 14px}
 .hero{max-width:1060px;margin:0 auto;padding:56px 20px 24px}
 .hero h1{font-size:40px;margin:0 0 12px;letter-spacing:4px}
 .hero .stance{border-left:3px solid var(--acc);padding:10px 16px;background:var(--card);border-radius:0 8px 8px 0;color:var(--dim);font-size:15px}
@@ -54,11 +55,11 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 <body>
 <header><nav class="nav">
 <span class="logo">🛸 非人类文明档案馆</span>
-<a href="#cases">可信案例</a><a href="#debunked">证伪清单</a><a href="#timeline">政府时间线</a><a href="#method">建档方法</a><a href="#cost">建站成本</a>
+<a href="#cases">可信案例</a><a href="#debunked">证伪清单</a><a href="#timeline">政府时间线</a><a href="#method">建档方法</a><a href="#cost">建站成本</a><a class="lang" href="en/">English</a>
 </nav></header>
 <div class="hero">
 <h1>非人类文明档案馆</h1>
-<div class="stance"><strong>本馆立场：</strong>不做"非人类文明存在"的断言。这里收录的是人类记录中最难解释的一批空中异常事件——证据在此，判断留给读者。事实截至 2026 年 10 月。</div>
+<div class="stance"><strong>本馆立场：</strong>不做“非人类文明存在”的断言。这里收录的是人类记录中最难解释的一批空中异常事件——证据在此，判断留给读者。事实截至 2026 年 10 月。</div>
 <div class="stats">
 <div class="stat"><div class="n">23</div><div class="l">可信案例</div></div>
 <div class="stat"><div class="n">9</div><div class="l">证伪 / 排除记录</div></div>
@@ -68,12 +69,12 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 <main>
 <section id="cases">
 <h2>第一部分 · 可信案例档案</h2>
-<div class="sec-desc">每个案例含时间、地点、概述、证人/证据、官方结论、可信度评级与"已证实 / 未证实"标注。可用搜索框或可信度筛选。</div>
+<div class="sec-desc">每个案例含时间、地点、概述、证人/证据、官方结论、可信度评级与“已证实 / 未证实”标注。可用搜索框或可信度筛选。</div>
 <div class="toolbar">
 <input id="q" type="search" placeholder="搜索案例、地点、关键词…（如 Tic Tac / 比利时 / 雷达）">
 <button data-f="all" class="active">全部</button>
-<button data-f="高">可信度：高</button>
-<button data-f="中">可信度：中</button>
+<button data-f="high">可信度：高</button>
+<button data-f="mid">可信度：中</button>
 </div>
 <div id="case-list">
 
@@ -86,7 +87,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：证人身份明确、陈述前后一致且终身未改口；它是现代 ufo 关注的起点，历史意义无可替代。但必须承认：这是一个**单人目击**案例，无任何物证。
 - **已证实**：目击报告本身、媒体报道、官方&quot;海市蜃楼&quot;结论。**未证实**：物体究竟是什么、阿诺德的速度估算是否准确。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 01 · 肯尼斯·阿诺德目击事件（现代飞碟时代的起点）</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -112,7 +113,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：残骸事件本身真实发生，军方前后矛盾的说辞（先承认&quot;飞碟&quot;次日改口）是合理的质疑起点；但&quot;外星飞船坠毁&quot;的说法**没有任何物证支撑**，主要依赖几十年后的回忆证词。必须 balanced 呈现：官方解释（莫古尔气球）有文件链条，阴谋论版本没有。
 - **已证实**：残骸被回收、军方两份矛盾声明、莫古尔计划的存在。**未证实**：残骸是外星飞船、有外星人尸体、政府掩盖。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 02 · 罗斯威尔事件</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -141,7 +142,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：雷达+目击+战机拦截三重印证，发生在首都核心空域，官方不得不公开回应。&quot;温度逆变&quot;说至今被许多研究者认为无法解释全部特征（如目标的高速机动）。
 - **已证实**：雷达记录、拦截行动、官方发布会。**未证实**：目标的真实性质。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 03 · 1952 年华盛顿特区不明飞行物波</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -169,7 +170,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：军方证人、正式备忘录、录音、物理痕迹，证据维度完整。灯塔说无法解释近距离接触陈述与辐射读数，但&quot;近距离接触三角形飞行器&quot;的部分仅依赖当事人陈述。
 - **已证实**：备忘录、录音、辐射与压痕记录。**未证实**：潘尼斯顿&quot;触摸飞行器并接收二进制信息&quot;的说法（系其多年后补充）。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 04 · 伦德尔舍姆森林事件（&quot;英国的罗斯威尔&quot;）</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -195,7 +196,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：北约成员国空军官方承认的雷达拦截记录，证据等级极高。但需注明：当年流传最广的那张&quot;三角形 ufo 照片&quot;（petit-rechain，1990）已于 2011 年被拍摄者承认是聚苯乙烯模型造假——**照片是假的，不等于整个波次是假的**，两者必须分开。
 - **已证实**：f-16 拦截与雷达锁定（空军官方承认）、大规模目击。**未证实**：三角飞行器的来源与性质。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 05 · 比利时大三角波</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -224,7 +225,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**（事件发生本身）/ **中**（v 形编队的性质）。理由：这是教科书式的&quot;一件事、两种成分&quot;案例——必须把已解释的照明弹部分和未解释的 v 形编队分开，混为一谈是常见错误。
 - **已证实**：大规模目击、照明弹的军方承认。**未证实**：v 形编队是什么。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 06 · 凤凰城之光</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -253,7 +254,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：军方传感器+多名顶级飞行员+雷达操作员+官方确认视频真实，是 21 世纪证据链最完整的军方案例之一。
 - **已证实**：视频真实性、雷达追踪、飞行员陈述。**未证实**：物体的来源与技术原理（任何&quot;反重力引擎&quot;之说都是推测）。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 07 · 尼米兹号/&quot;Tic Tac&quot;事件</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -282,7 +283,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：视频真实性无争议，但&quot;异常性&quot;本身存在技术争议，不像 tic tac 那样有多重独立佐证。这是&quot;真视频、假异常&quot;可能性的典型，收录时必须保留争议双方。
 - **已证实**：视频由海军拍摄且真实。**未证实**：物体表现出超常性能（存在合理的常规解释竞争）。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 08 · &quot;Gimbal&quot;与&quot;GoFast&quot;视频（2015）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -310,7 +311,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：这是&quot;证据真实、解读对立&quot;的典型——视频与雷达数据真实，但 scu（异常）与 aaro（孔明灯）给出完全相反的结论。档案馆必须并列双方，不选边。
 - **已证实**：视频真实、cbp 飞机与塔台的原始报告。**未证实**：跨介质航行（aaro 已给出反证，scu 不服——争议中）。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 09 · 阿瓜迪亚事件（波多黎各，2013）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -335,7 +336,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：影像真实性获官方背书是加分项；但&quot;跨介质飞行器&quot;的解读来自科贝尔单方面陈述，视频本身经过剪辑（翻拍自监视器），且无打捞物证。注意：科贝尔是 ufo 纪录片导演，身份上存在&quot;利益相关&quot;的提醒必要。
 - **已证实**：视频为海军拍摄、真实。**未证实**：物体入水后去向、是否为&quot;跨介质载具&quot;。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 10 · USS 奥马哈号事件（2019）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -360,7 +361,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：照片来源链条（报社→mod→新闻官私藏→学者追回）有文件支撑，是&quot;最清晰的 ufo 照片&quot;候选；但两名拍摄者身份至今不明、无法重新访谈，且只有复印件而非底片。这是加分与减分同样明显的一例。
 - **已证实**：照片流转链条、mod 曾持有。**未证实**：照片中物体是什么、拍摄者陈述的细节。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 11 · 卡尔瓦因照片（1990）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -386,7 +387,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：电磁干扰效应在两架独立战机上重复出现、dia 正式情报评估背书，是冷战时期证据等级最高的军方案例之一。
 - **已证实**：拦截过程、仪表失灵、dia 报告。**未证实**：物体的来源（贾法里个人倾向非 terrestrial 解释，但那是他的观点，不是证据结论）。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 12 · 德黑兰 1976 年 F-4 拦截事件</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -414,7 +415,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：三名职业机组、长时间、多阶段的目击，雷达曾确认——尽管官方后来退缩。行星误认说难以解释雷达回波与 50 分钟的伴飞机动。
 - **已证实**：机组报告、雷达曾确认、faa 的暧昧收场。**未证实**：&quot;母船&quot;的尺寸描述（巨大发光体在夜间的尺寸极易被高估）。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 13 · 日航 1628 号航班事件（1986）</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -439,7 +440,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：证人质量高、数量多，且有&quot;云洞&quot;这一罕见的物理效应描述；但无影像、无雷达，且部分证词在形状细节上有出入。faa 的回应方式本身成为争议点。
 - **已证实**：多人目击、faa 通话录音。**未证实**：云洞的成因（narcap 估算需约 9.4 kj/m³ 的能量，是推测性计算）。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 14 · 奥黑尔机场事件（2006）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -464,7 +465,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：可信的职业证人+物理痕迹+官方&quot;未解释&quot;定级，三者齐备。
 - **已证实**：着陆痕迹、蓝皮书&quot;未解释&quot;结论。**未证实**：&quot;小个子身影&quot;的细节（仅萨莫拉一人看到）。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 15 · 索科罗/萨莫拉事件（1964）</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -489,7 +490,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：高**。理由：核武器系统的异常关机有书面记录，证人是值班军官。这是&quot;ufo 与核设施&quot;关联系列中最硬的一例（同类还包括 1975 年多基地入侵、1980 年伦德尔舍姆亦在核基地旁）。
 - **已证实**：导弹离线记录、证人证词。**未证实**：不明物体与导弹故障的因果关系（时间相关≠因果，这是必须标注的逻辑线）。
 
-" data-cred="高">
+" data-cred="high">
       <div class="case-head">
         <h3>案例 16 · 马姆斯特罗姆空军基地导弹事件（1967）</h3>
         <span class="cred cred-high">可信度：高</span>
@@ -514,7 +515,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：人数众多、陈述高度一致是强项；但证人多为未成年人、时隔久远，且无影像与物理证据。&quot;校方被噤声&quot;属未证实说法，收录时需标注。
 - **已证实**：大规模目击、当年媒体报道。**未证实**：物体降落的细节、&quot;被噤声&quot;情节。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 17 · 韦斯托尔学校事件（1966）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -539,7 +540,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：人数多、细节一致、跨文化背景下自发画出相似图像，难以用简单的&quot;串供&quot;解释；但证人全是儿童、无成人目击、无物证，这是硬伤。麦克本人的学术声誉后来也因这类研究受损，需如实注明。
 - **已证实**：儿童们的陈述与绘画。**未证实**：&quot;外星人传达环保信息&quot;等转述内容（系孩子们的事后表述）。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 18 · 阿里尔学校事件（1994）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -564,7 +565,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：火球与坠落物是两回事——火球大概率是陨石/太空垃圾，但&quot;军方封锁并运走物体&quot;的多名证人陈述从未被令人信服地解释。&quot;宇宙-96&quot;说是目前最强的常规解释，但苏联从未确认。
 - **已证实**：火球、军方到场。**未证实**：运走的&quot;橡子状物体&quot;（无照片、无残骸）。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 19 · 凯克斯堡事件（1965）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -589,7 +590,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：法国官方机构的正式调查与&quot;未解释&quot;定级是加分项；但本质上是单人目击，马斯后来拒绝再谈此事，无法复核。
 - **已证实**：着陆痕迹、gepan 调查记录。**未证实**：&quot;被光束麻痹&quot;的生理机制。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 20 · 瓦朗索尔事件（1965）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -614,7 +615,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：人身伤害的医疗记录真实，&quot;菱形喷火物+直升机群&quot;的组合指向某种人类军事活动（如试验飞行器事故）的可能性不能排除；但&quot;美国政府拥有该飞行器&quot;从未被证实，诉讼也被驳回。
 - **已证实**：医疗记录、诉讼与驳回。**未证实**：飞行器的归属（军方试验品与&quot;非人类飞行器&quot;都只是假说）。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 21 · 卡什-兰德拉姆事件（1980）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -639,7 +640,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 - **可信度：中**。理由：失踪是事实、通话录音是硬证据；但&quot;ufo 导致失踪&quot;只是基于通话内容的推测，同样无法排除飞行员失误+恰好看到其他飞行器/天体的可能。
 - **已证实**：失踪、通话录音。**未证实**：失踪与不明飞行器的因果关系。
 
-" data-cred="中">
+" data-cred="mid">
       <div class="case-head">
         <h3>案例 22 · 弗雷德里克·瓦伦蒂奇失踪事件（1978）</h3>
         <span class="cred cred-mid">可信度：中</span>
@@ -669,7 +670,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 " data-cred="?">
       <div class="case-head">
         <h3>案例 23 · 墨西哥空军&quot;坎佩切&quot;视频事件（2004）——附：已被解释</h3>
-        <span class="cred cred-">可信度：未分级</span>
+        <span class="cred cred-">?</span>
       </div>
       <div class="case-meta">2004 年 3 月 5 日 ｜ 墨西哥坎佩切州上空</div>
       <div class="case-body"><ul>
@@ -687,7 +688,7 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 </section>
 <section id="debunked">
 <h2>第二部分 · 已证伪 / 已排除清单</h2>
-<div class="sec-desc">网站的"防火墙"：曾经广为流传、但已有确凿证据证明为造假，或已有公认常规解释的案例。新投稿先过这一关。</div>
+<div class="sec-desc">网站的“防火墙”：曾经广为流传、但已有确凿证据证明为造假，或已有公认常规解释的案例。新投稿先过这一关。</div>
 <blockquote>以下案例曾经广为流传，但已有确凿证据证明为造假，或已有公认的常规解释。档案馆收录它们是为了&quot;排雷&quot;，避免网站引用它们损害可信度。</blockquote><article class='deb'><div class='deb-group'>A. 证实造假</div><h3><strong>A1 · 比利·迈耶（Billy Meier）照片与接触故事（1970 年代–）</strong></h3><div class='case-body'><ul>
 <li>瑞士农夫，声称与来自昴宿星团的&quot;普莱亚人&quot;长期接触，拍下大量&quot;飞船&quot;清晰照片。</li>
 <li><strong>证伪</strong>：前妻卡利奥佩（Kalliope）1997 年接受采访，证实照片是丈夫用垃圾桶盖、图钉等 household 物品制作的模型；所谓&quot;外星女性&quot;照片被证实是美国歌舞团 Golddiggers 成员在《迪恩·马丁秀》上的剧照；&quot;恐龙照片&quot;直接取自儿童图书插图；数字扫描分析显示&quot;婚礼蛋糕飞碟&quot;与垃圾桶盖几何尺寸完全吻合。</li>
@@ -723,13 +724,13 @@ footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;colo
 <li>1948 年 1 月 7 日，国民警卫队飞行员托马斯·曼特尔（Thomas Mantell）追击不明物坠机身亡，事后证实追逐的是&quot;天空之钩&quot;（Skyhook）高空气球。这是&quot;追击 UFO 致死&quot;的著名案例，真相是气球——收录以正视听。</li>
 </ul></div></article>
 <article class='deb'><div class='deb-group'>B. 公认的常规解释（典型误认）</div><h3><strong>B5 · 油田火炬/地面灯光的红外误读</strong></h3><div class='case-body'><ul>
-<li>见案例 25（墨西哥坎佩切 2004）。红外成像会把地面高温源拍成&quot;空中火球&quot;，判读红外视频必须结合地理方位。</li>
+<li>见案例 23（墨西哥坎佩切 2004）。红外成像会把地面高温源拍成&quot;空中火球&quot;，判读红外视频必须结合地理方位。</li>
 </ul>
 <p>-<br>-<br>-</p></div></article>
 </section>
 <section id="timeline">
 <h2>第三部分 · 政府项目与公开进程时间线</h2>
-<div class="sec-desc">1947 蓝皮书计划 → 2026 五角大楼解密。官方从未承认过"外星飞船"的存在；立场演变：1969 "无科学价值" → 2021 "现象真实、大部分未解释" → 2024 "未发现地外技术实证"。</div>
+<div class="sec-desc">1947 蓝皮书计划 → 2026 五角大楼解密。官方从未承认过“外星飞船”的存在；立场演变：1969 “无科学价值” → 2021 “现象真实、大部分未解释” → 2024 “未发现地外技术实证”。</div>
 <div class="timeline"><div class='tl-row'><div class='tl-time'>1947–1949</div><div class='tl-event'><strong>信号计划（Project Sign）</strong><p>美国空军首个官方 UFO 调查项目</p></div></div><div class='tl-row'><div class='tl-time'>1949–1952</div><div class='tl-event'><strong>怨恨计划（Project Grudge）</strong><p>继任项目，倾向否定</p></div></div><div class='tl-row'><div class='tl-time'>1952–1969</div><div class='tl-event'><strong>蓝皮书计划（Project Blue Book）</strong><p>空军最系统的调查：12,618 起报告，701 起列为&quot;未解释&quot;后结项</p></div></div><div class='tl-row'><div class='tl-time'>1968–1969</div><div class='tl-event'><strong>康顿报告（Condon Report）</strong><p>科罗拉多大学受空军委托，结论&quot;UFO 研究无科学价值&quot;，直接导致蓝皮书 1969 年 12 月关闭。该报告的方法与结论至今仍有争议</p></div></div><div class='tl-row'><div class='tl-time'>2007–2012</div><div class='tl-event'><strong>AATIP（先进航空威胁识别计划）</strong><p>五角大楼秘密项目，经费约 2200 万美元，由参议员哈里·里德推动、毕格罗宇航公司承接；负责人路易斯·埃利桑多（Luis Elizondo）2017 年辞职后向《纽约时报》曝光</p></div></div><div class='tl-row'><div class='tl-time'>2017.12</div><div class='tl-event'><strong>《纽约时报》曝光 AATIP 与三段海军视频</strong><p>现代 UAP 关注浪潮的起点（即案例 07、08 的视频来源）</p></div></div><div class='tl-row'><div class='tl-time'>2020.08</div><div class='tl-event'><strong>UAP 特别工作组（UAP Task Force）</strong><p>海军主导成立，隶属海军情报办公室</p></div></div><div class='tl-row'><div class='tl-time'>2021.06</div><div class='tl-event'><strong>ODNI 初步评估报告</strong><p>国家情报总监办公室：144 起军方报告中仅 1 起被确认，其余未解释；承认现象真实存在</p></div></div><div class='tl-row'><div class='tl-time'>2022.05</div><div class='tl-event'><strong>国会听证会（50 年来首次）</strong><p>众议院情报委员会，军方官员作证</p></div></div><div class='tl-row'><div class='tl-time'>2022.07</div><div class='tl-event'><strong>AARO 成立（全域异常解析办公室）</strong><p>取代 UAP Task Force，成为国防部常设调查机构</p></div></div><div class='tl-row'><div class='tl-time'>2023.04</div><div class='tl-event'><strong>AARO 公布&quot;金属球体&quot;视频</strong><p>AARO 首任主任 Sean Kirkpatrick 在参议院听证会上公开一段 MQ-9 无人机在中东拍到的金属球体 UAP 视频（2022 年拍摄），称全球类似报告达数百起。本馆存档：<a href="media/misc/middle-east-uap-2022.webm" target="_blank" rel="noopener">视频</a>（21 秒，公共领域）。</p></div></div><div class='tl-row'><div class='tl-time'>2023.07.26</div><div class='tl-event'><strong>国会听证会：格鲁什作证</strong><p>前情报官员大卫·格鲁什（David Grusch）宣誓作证，声称美国有数十年的&quot;非人类飞行器回收与逆向工程计划&quot;并回收过&quot;生物样本&quot;；同场作证的还有弗拉沃（案例 07）与格雷夫斯。<strong>必须标注</strong>：格鲁什的陈述是&quot;转述他人告知&quot;（hearsay），他承认未亲眼见过；AARO 2024 年报告称&quot;未发现实证&quot;</p></div></div><div class='tl-row'><div class='tl-time'>2023.09.14</div><div class='tl-event'><strong>NASA UAP 独立研究报告</strong><p>16 人专家组（主席大卫·斯珀格尔）：未发现地外起源证据；批评现有数据质量太差；建议 NASA 用地球观测卫星、AI 与众包 App 系统收集数据；任命首位 UAP 研究主任</p></div></div><div class='tl-row'><div class='tl-time'>2024.03</div><div class='tl-event'><strong>AARO《历史记录报告》第一卷</strong><p>覆盖 1945–2023：结论是未发现美国政府回收/逆向&quot;地外技术&quot;的实证；披露曾有人提议设立代号&quot;Kona Blue&quot;的逆向工程特别项目，被国土安全部驳回</p></div></div><div class='tl-row'><div class='tl-time'>2024.11</div><div class='tl-event'><strong>国会听证会&quot;揭开真相&quot;</strong><p>记者谢伦伯格（Michael Shellenberger）公开一段 13 分钟&quot;白色球体&quot;高清视频（科威特附近拍摄）等</p></div></div><div class='tl-row'><div class='tl-time'>2025.09.09</div><div class='tl-event'><strong>国会听证会&quot;恢复信任&quot;</strong><p>空军老兵作证&quot;铁三角&quot;目击、前海军军士描述 USS 杰克逊号事件；出现&quot;UAP 承受地狱火导弹直接命中&quot;的视频说法（<strong>真实性未经独立核实</strong>）</p></div></div><div class='tl-row'><div class='tl-time'>2026</div><div class='tl-event'><strong>五角大楼分批公开 UAP 文件</strong><p>据媒体报道开始多批次解密公开（含 2023 年休伦湖上空战机击落不明物体的视频等）。<strong>注</strong>：截至本草稿编写时（2026-10），公开仍在进行中，内容有待学术梳理，不宜直接当定论引用</p></div></div></div>
 </section>
 <section id="method">
